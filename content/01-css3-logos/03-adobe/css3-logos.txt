@@ -1,0 +1,59 @@
+Title: Adobe
+----
+html: <div id="adobe" class="icon">
+    <div class="adobe1"></div>
+    <div class="adobe2"></div>
+    <div class="adobe3"></div>
+</div>
+----
+background: #df2624
+----
+css: body, #adobe {
+    background: #df2624;
+}
+#adobe { 
+    height: 250px;
+    left: 50%   ;
+    overflow: hidden;
+    margin: -125px 0 0 -146px;
+    top: 25%;
+    width: 292px;
+}
+.adobe1,
+.adobe2,
+.adobe3 {
+    background: #fff;
+}
+.adobe1 {
+    height: 305px;
+    left: 55px;
+    top: -26px;
+    transform: rotate(23deg);
+    width: 70px;
+}
+.adobe2 {
+    height: 305px;
+    left: 162px;
+    top: -26px;
+    transform: rotate(-23deg);
+    width: 70px;
+}
+.adobe3 {
+    height: 50px;
+    left: 62px;
+    top: 200px;
+    transform: skewx(22deg);
+    width: 93px;
+}
+/*---------------------------------------------------------
+-* General Styles
+-*-------------------------------------------------------*/
+.icon, .icon * {
+    display: block;
+    position: absolute;
+}
+----
+prefix: 1
+----
+date: 5.10.2011
+----

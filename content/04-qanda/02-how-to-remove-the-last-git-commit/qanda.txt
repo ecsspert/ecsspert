@@ -1,0 +1,7 @@
+Title: How to undo (revert, delete) the last git commit
+----
+Answer:
+<p>if you didn't push try this (you will not lose your changes)</p>
+<pre>git reset --soft HEAD~1</pre>
+<p>if you did push, then consider</p>
+<pre>git revert [commit sha]</pre>

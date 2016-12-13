@@ -1,0 +1,18 @@
+Title: Fabric
+----
+background: #aaa
+----
+css: html {
+	background: 
+		linear-gradient(15deg, rgba(0,0,0,.1), rgba(255,255,255,.1) 25%, rgba(0,0,0,.1) 50%, rgba(255,255,255,.1) 75%, rgba(0,0,0,.1)),
+		radial-gradient(circle, #254383 8%, transparent 8%, transparent 30%, #254383 30%, #254383 35%, transparent 35%), 
+		radial-gradient(circle, #254383 6%, transparent 6%) 25em 25em;
+	background-size: 100% 100%, 50em 50em, 50em 50em;
+	background-color: #112564;
+	font-size:1px;
+	/* change the scale of the pattern by modifying the font size 
+	-* ex: font-size: 1.5px will increase it by 50% */
+} 
+----
+prefix: 1
+----

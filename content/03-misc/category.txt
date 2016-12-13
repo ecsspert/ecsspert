@@ -1,0 +1,14 @@
+Title: Miscellaneous
+----
+Shorttitle: Misc
+----
+Icon: misc
+----
+Intro: A place to store our bits and pieces of untamed CSS.
+----
+Featured: kingsday-css3-kaleidoscope
+----
+General title suffix: Misc
+----
+General header description: - part of the untamed CSS colection created by eCSSpert.com
+----

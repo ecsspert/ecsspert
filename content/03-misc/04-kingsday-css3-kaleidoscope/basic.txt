@@ -1,0 +1,199 @@
+Title: King's Day 2014 - CSS3 Kaleidoscope
+----
+about: CSS3 Kaleidoscope to illustrate how I remember Koningsdag - King's Day Amsterdam 2014
+----
+background: #f90
+----
+html: <div class="header">
+    <h3>How I remember</h3>
+    <h1>King's Day 2014</h1>
+    <h2>CSS3 Kaleidoscope</h2>
+</div>
+<div class="kaleidoscope">
+    <div class="kaleidoscope-inner">
+        <div class="view flipped">
+            <div class="mirror">
+                <div class="image"><div class="inner"></div></div>
+            </div>
+            <div class="mirror">
+                <div class="image"><div class="inner"></div></div>
+            </div>
+            <div class="mirror">
+                <div class="image"><div class="inner"></div></div>
+            </div>
+        </div>
+        <div class="view">
+            <div class="mirror">
+                <div class="image"><div class="inner"></div></div>
+            </div>
+            <div class="mirror">
+                <div class="image"><div class="inner"></div></div>
+            </div>
+            <div class="mirror">
+                <div class="image"><div class="inner"></div></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="fineprint">Works on IE 10+ and all other modern browsers.</div>
+----
+css:
+/* CSS3 Kaleidoscope - by @vladzinculescu
+
+With help from: codrops http://bit.ly/1rBSdU4
+A technique originally created by @thebabydino */
+
+@-webkit-keyframes rotateView {
+    0% { transform: rotateZ(0) }
+    100% { transform: rotateZ(359deg) }
+}
+@-moz-keyframes rotateView {
+    0% { transform: rotateZ(0) }
+    100% { transform: rotateZ(359deg) }
+}
+@keyframes rotateView {
+    0% { transform: rotateZ(0) }
+    100% { transform: rotateZ(359deg) }
+}
+.kaleidoscope {
+    border-radius: 50%;
+    border: 20px solid white;
+    box-shadow: 0 5px 0 rgba(0,0,0,.2);
+    height: 500px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    width: 500px;
+}
+
+/* I had to separate the container into kaleidoscope and inner
+because on Safari overflow: hidden on en element with
+border-radius: 50% does not work for children that have transform */
+
+.kaleidoscope-inner {
+    animation: rotateView 30s linear infinite;
+    border-radius: 50%;
+    border-radius: 50%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    /* this is to make the circular mask effect in Safari */
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+}
+.view {
+    border-radius: 50%;
+    height: 100%;
+    overflow: hidden;
+    perspective: 530px;
+    position: absolute;
+    width: 100%;
+}
+.flipped {
+    background: black;
+    transform: rotateY(180deg) rotateZ(60deg);
+}
+/* this is to optimize performance as much as I can,
+though on an iPhone 4s it's still a bit jumpy */
+.viwe:not(.flipped),
+.mirror,
+.image {
+    backface-visibility: hidden;
+}
+.mirror {
+    height: 50%;
+    left: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    transform-origin: 0% 0%;
+    width: 50%;
+}
+.mirror:nth-child(1) {
+    transform: rotateZ(0deg) skew(30deg);
+}
+.mirror:nth-child(2) {
+    transform: rotateZ(120deg) skew(30deg);
+}
+.mirror:nth-child(3) {
+    transform: rotateZ(240deg) skew(30deg);
+}
+.image {
+    height: 100%;
+    left: -29%;
+    position: absolute;
+    top: 0;
+    transform-origin: 50% 50%;
+    transform: skew(-30deg);
+    width: 100%;
+}
+@-webkit-keyframes rotateImage {
+    0% { transform: rotateZ(0); background-position: 50% 44px; }
+    100% { transform: rotateZ(359deg); background-position: 50% -1832px; }
+}
+@-moz-keyframes rotateImage {
+    0% { transform: rotateZ(0); background-position: 50% 44px; }
+    100% { transform: rotateZ(359deg); background-position: 50% -1832px; }
+}
+@keyframes rotateImage {
+    0% { transform: rotateZ(0); background-position: 50% 44px; }
+    100% { transform: rotateZ(359deg); background-position: 50% -1832px; }
+}
+.image .inner {
+    animation: rotateImage 40s linear infinite;
+    background: url(/assets/img/misc/kingsday-full.png) repeat-x;
+    display: block;
+    height: 375px;
+    left: -25%;
+    position: absolute;
+    top: -25%;
+    width: 376px;
+}
+/*-----------------------------------------------------------------------------
+-* UI Elements
+-*---------------------------------------------------------------------------*/
+html {
+    background: #f90;
+    min-height: 100%;
+}
+body {
+    color: #fff;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(0,0,0,.2);
+    -webkit-font-smoothing: antialiased;
+}
+.header {
+    padding: 30px 0;
+}
+h1 {
+    border-bottom: 1px solid #fff;
+    display: inline-block;
+    font-size: 48px;
+    margin: 5px 0 7px;
+    padding-bottom: 10px;
+    text-shadow: 0 2px 0 rgba(0,0,0,.2);
+}
+h2 {
+    font-size: 24px;
+    font-weight: normal;
+    margin: 0;
+}
+h3 {
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin: 0;
+    text-transform: uppercase;
+}
+.fineprint {
+    margin-top: 30px;
+    text-transform: uppercase;
+}
+----
+prefix: 1
+----
+hideui: 0
+----

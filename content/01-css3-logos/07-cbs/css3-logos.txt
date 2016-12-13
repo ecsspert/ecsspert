@@ -1,0 +1,65 @@
+Title: CBS
+----
+html:   <div id="cbs" class="icon">
+    <div class="cbs1"></div>
+</div>
+----
+background: #134b95
+----
+css: body, #cbs, #cbs:before, #cbs:after {
+    background-color: #134b95;
+}
+#cbs {
+    border-radius: 50%;
+    height: 200px;
+    left: 50%;
+    margin: -100px 0 0 -100px;
+    top: 25%;
+    width: 200px;
+}
+#cbs:before,
+#cbs:after
+{
+    border-radius: 50%;
+    content: "#";
+    display: block;
+    height: 204px;
+    left: -2px;
+    overflow: hidden;
+    position: absolute;
+    text-indent: -9999px;
+    width: 204px;
+}
+#cbs:before {
+    box-shadow: inset 0 2px 2px rgba(0,0,0,0.5);
+    clip: rect(0 200px 58px 0);
+    top: 44px;
+}
+#cbs:after {
+    clip: rect(146px 200px 204px 0);
+    top: -44px;
+}
+#cbs .cbs1 {
+    border-radius: 50%;
+    display: block;
+    height: 106px;
+    left: 47px;
+    top: 47px;
+    width: 106px;
+    z-index: 10;
+}
+#cbs,
+#cbs .cbs1 {
+    background: #ccc;
+    box-shadow: inset 0 3px 1px rgba(255,255,255,0.5), inset 0 -2px 0 #aaa, 0 2px 2px rgba(0,0,0,0.5), inset 0 -3px 2px rgba(255,255,255,0.5);
+}
+/*---------------------------------------------------------
+-* General Styles
+-*-------------------------------------------------------*/
+.icon, .icon * {
+    display: block;
+    position: absolute;
+}
+----
+prefix: 1
+----

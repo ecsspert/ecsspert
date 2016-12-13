@@ -1,0 +1,11 @@
+Title: How to make the body have 100% of the browser height
+----
+Answer:
+<pre>html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%; <span>/* the body can resize according to it's content, but it will always be at least the same height as the browser window */</span>
+  box-sizing: border-box; <span>/* you don't need this if your body doesn't have padding applied to it */</span>
+}</pre>

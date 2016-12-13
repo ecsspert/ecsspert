@@ -1,0 +1,25 @@
+Title: Paranoia
+----
+background: #aaa
+----
+css: html {
+	background: 
+		radial-gradient(circle, rgba(255,255,255,.8) 4%, transparent 4%) 84em -13em, 
+		radial-gradient(circle, black 8%, transparent 8%) 95em -2em, 
+		radial-gradient(circle, rgba(255,255,255,.4) 16%, transparent 10%) 75em -22em, 
+		radial-gradient(circle, #94caf0 16%, transparent 10%) 95em -2em, 
+		radial-gradient(circle, white 24%, #dedede 31%, transparent 26%) 95em -2em, 
+		radial-gradient(circle, rgba(255,255,255,.8) 4%, transparent 4%) -116em -13em, 
+		radial-gradient(circle, black 8%, transparent 8%) -105em -2em, 
+		radial-gradient(circle, rgba(255,255,255,.4) 16%, transparent 10%) -125em -22em, 
+		radial-gradient(circle, #94caf0 16%, transparent 10%) -105em -2em, 
+		radial-gradient(circle, white 24%, #dedede 31%, transparent 26%) -105em -2em;
+	background-color: #fc0;
+	background-size: 450em 260em;
+	font-size: .8px;
+	/* change the scale of the pattern by modifying the font size 
+	-* ex: font-size: 1.5px will increase it by 50% */
+} 
+----
+prefix: 1
+----

@@ -1,0 +1,187 @@
+Title: Windows
+----
+html: <div id="windows" class="icon">
+	<div class="window1">
+		<div class="window-e1"></div>
+		<div class="window-e2 shadow1"></div>
+		<div class="window-e2 shadow2"></div>
+		<div class="window-e2"></div>
+		<div class="window-e3"></div>
+		<div class="window-e4 shadow3"></div>
+		<div class="window-e4"></div>
+	</div>
+	<div class="window4">
+		<div class="window-e1 shadow3"></div>
+		<div class="window-e1"></div>
+		<div class="window-e2 shadow1"></div>
+		<div class="window-e2 shadow2"></div>
+		<div class="window-e2"></div>
+		<div class="window-e3"></div>
+
+		<div class="window-e4"></div>
+	</div>
+	<div class="window3">
+		<div class="window-e1"></div>
+		<div class="window-e2 shadow1"></div>
+		<div class="window-e2 shadow2"></div>
+		<div class="window-e2"></div>
+		<div class="window-e3"></div>
+		<div class="window-e4 shadow3"></div>
+		<div class="window-e4"></div>
+	</div>
+	<div class="window2">
+		<div class="window-e1 shadow3"></div>
+		<div class="window-e1"></div>
+		<div class="window-e2 shadow1"></div>
+		<div class="window-e2 shadow2"></div>
+		<div class="window-e2"></div>
+		<div class="window-e3"></div>
+		<div class="window-e4"></div>
+	</div>
+</div>
+----
+background: #4192d1
+----
+css: body, #windows, .window-e4 { 
+	background: #4192d1;
+}
+#windows { 
+	left: 50%;
+    height: 220px;
+    margin: -110px 0 0 -90px;
+	top: 25%;
+	transform: rotate(16deg);
+    width: 188px;
+}
+.window-e1,.window2,.window3,.window4 { 
+	position: absolute;
+}
+.window-e1 { 
+	border-radius: 100px/67px;
+	clip: rect(0px 77px 67px 0);
+	height: 67px;
+	left: 9px;
+	position: absolute;
+	top: 11px;
+	width: 102px;
+}
+.window-e2 {
+	height: 85px;
+	left: 0;
+	position: absolute;
+	top: 27px;
+	transform: skewy(-30deg);
+	width: 25px;
+}
+.window-e3 { 
+	height: 41px;
+	left: 24px;
+	position: absolute;
+	top: 64px;
+	width: 62px;
+}
+.window-e4 { 
+	opacity: 1;
+	border-radius: 100px/67px;
+	clip: rect(0 77px 12px 16px);
+	height: 67px;
+	left: 9px;
+	position: absolute;
+	top: 96px;
+	width: 100px;
+}
+.window1 { 
+	left: 0;
+	position: absolute;
+	top: 0;
+}
+.window1 .window-e1,.window1 .window-e2 { 
+	background: #d53407;
+}
+.window1 .window-e3 {
+	background-image: radial-gradient(100% 100%, circle, #ebbd2c, #D53407 60%); /* legacy syntax */
+	background-image: radial-gradient(circle at 100% 100%, #ebbd2c, #D53407 60%); /* standard syntax */
+}
+.window2 {
+	left: 183px;
+	position: absolute;
+	transform: rotate(180deg);
+	top: 119px;
+}
+.window2 .window-e1 {
+	background-image: radial-gradient(100% 0%, circle, #c7d78e, #7dae1c 50%); /* legacy syntax */
+	background-image: radial-gradient(circle at 100% 0%, #c7d78e, #7dae1c 50%); /* standard syntax */
+}
+.window2 .window-e2,.window2 .window-e3 { 
+	background: #7dae1c;
+}
+.window3 { 
+	left: 0;
+	position: absolute;
+	top: 95px;
+}
+.window3 .window-e1,.window3 .window-e2,.window3 .window-e3 { 
+	background: #3576ac;
+}
+.window3 .window-e1 {
+	background-image: radial-gradient(100% 0%, circle, #b7d7ec, #3576ac 50%); /* legacy syntax */
+	background-image: radial-gradient(circle at 100% 0%, #b7d7ec, #3576ac 50%); /* standard syntax */
+}
+.window4 {
+	left: 183px;
+	position: absolute;
+	transform: rotate(180deg);
+	top: 214px;
+}
+.window4 .window-e1,.window4 .window-e2 { 
+	background: #fac112;
+}
+.window4 .window-e3 {
+	background-image: radial-gradient(100% 100%, circle, #f5e2a8, #fac112 70%); /* legacy syntax */
+	background-image: radial-gradient(circle at 100% 100%, #f5e2a8, #fac112 70%); /* standard syntax */
+}
+#windows .registered {
+	left: 190px;
+	position: absolute;
+	transform: rotate(-16deg);
+	top: 160px;
+}
+#windows .shadow1,#windows .shadow2,#windows .shadow3 { 
+	background: #3c86c0;
+}
+.window1 .window-e4,.window3 .window-e4 { 
+	top: 101px;
+}
+.window1 .shadow1,.window3 .shadow1 {
+	left: 65px;
+	clip: rect(0px 30px 94px 21px);
+	transform: skewy(30deg);
+	top: 16px;
+}
+.window1 .shadow2,.window3 .shadow2 { 
+	clip: rect(50px 40px 90px 5px);
+	top: 30px;
+	width: 32px;
+}
+.window1 .shadow3,.window3 .shadow3 {
+	clip: rect(0 77px 12px 16px);
+	top: 96px;
+}
+.window2 .shadow1,.window4 .shadow1 {
+	clip: rect(0px 10px 90px 5px);
+	left: -10px;
+	top: 28px;
+}
+.window2 .shadow2,.window4 .shadow2 { 
+	clip: rect(70px 40px 90px 5px);
+	left: -6px;
+	top: -44px;
+}
+.window2 .shadow3,.window4 .shadow3 {
+	clip: rect(0 73px 22px 0px);
+	left: 9px;
+	top: 6px;
+}
+----
+prefix: 1
+----

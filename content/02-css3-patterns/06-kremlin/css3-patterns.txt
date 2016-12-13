@@ -1,0 +1,18 @@
+Title: Kremlin
+----
+background: #aaa
+----
+css: html {
+	background: 
+		linear-gradient(135deg, transparent 50%, rgba(0,0,0,0.1) 50%) 20em 0em, 
+		linear-gradient(45deg, transparent 50%, rgba(255,255,255,0.2) 50%) 20em 0em, 
+		linear-gradient(45deg, transparent 10%, green 10%, green 35%, transparent 35%, transparent 60%, green 60%, green 85%, transparent 85%) 0 0;
+	background-size: 50em 50em, 50em 50em, 100em 100em;
+	background-color: yellow;
+	font-size: 1px;
+	/* change the scale of the pattern by modifying the font size 
+	-* ex: font-size: 1.5px will increase it by 50% */
+}
+----
+prefix: 1
+----

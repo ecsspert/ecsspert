@@ -1,0 +1,22 @@
+Title: Christmass Present
+----
+background: #aaa
+----
+css: html {
+	background: 
+		linear-gradient(-45deg, transparent 85%, red 85%) 71em -29em,
+		linear-gradient(135deg, transparent 85%, red 85%) 29em -71em,
+		linear-gradient(45deg, transparent 85%, red 85%) 29em 71em,
+		linear-gradient(225deg, transparent 85%, red 85%) 71em -71em,
+		radial-gradient(circle, red 40%, transparent 40%) 50em 51em,
+		linear-gradient(135deg, transparent 37%, white 37%, white 64%, transparent 64%) 0em 0em,
+		linear-gradient(45deg, transparent 37%, white 37%, white 64%, transparent 64%) 0em 0em;
+	background-size: 100em 100em;
+	background-color: red;
+	font-size: 1px;
+	/* change the scale of the pattern by modifying the font size 
+	-* ex: font-size: 1.5px will increase it by 50% */
+}
+----
+prefix: 1
+----

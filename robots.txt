@@ -1,0 +1,21 @@
+Sitemap: http://ecsspert.dev/sitemap
+
+User-agent: *
+Disallow: /content
+Disallow: /preview
+Disallow: /render
+
+User-agent: MSIECrawler
+Disallow: /
+
+User-agent: psbot
+Disallow: /
+
+User-agent: Fasterfox
+Disallow: /
+
+User-agent: Xenu
+Disallow: /
+
+User-agent: SiteSucker
+Disallow: /

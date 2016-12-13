@@ -1,0 +1,19 @@
+Title: Forest
+----
+background: #aaa
+----
+css: html {
+	background: 
+		linear-gradient(60deg, #48987f 22%, transparent 22%) 0em -40em, 
+		linear-gradient(-60deg, #48987f 22%, transparent 22%) 0em -40em, 
+		linear-gradient(60deg, #48987f 32%, transparent 30%), 
+		linear-gradient(-60deg, #48987f 32%, transparent 30%);
+	background-color: #02e3a9;
+	background-size: 100em 100em;
+	font-size: 1px;
+	/* change the scale of the pattern by modifying the font size 
+	-* ex: font-size: 1.5px will increase it by 50% */
+}
+----
+prefix: 1
+----

@@ -1,0 +1,165 @@
+Title: McDonalds
+----
+html: <div id="mcdonalds" class="icon">
+	<div class="left">
+		<div class="arch1 arch"></div>
+		<div class="arch2 arch"></div>
+		<div class="glow">
+			<div class="arch1 arch"></div>
+			<div class="arch2 arch"></div>
+		</div>
+		<div class="inner">
+			<div class="arch1 arch"></div>
+			<div class="arch2 arch"></div>
+		</div>
+		<div class="hole">
+			<div class="arch1 arch"></div>
+			<div class="arch2 arch"></div>
+		</div>
+		<div class="triangle1 triangle"></div>
+		<div class="triangle2 triangle"></div>
+	</div>
+	<div class="right">
+		<div class="arch1 arch"></div>
+		<div class="arch2 arch"></div>
+		<div class="glow">
+			<div class="arch1 arch"></div>
+			<div class="arch2 arch"></div>
+		</div>
+		<div class="inner">
+			<div class="arch1 arch"></div>
+			<div class="arch2 arch"></div>
+		</div>
+		<div class="triangle1 triangle"></div>
+		<div class="hole">
+			<div class="arch1 arch"></div>
+			<div class="arch2 arch"></div>
+		</div>
+	</div>
+	<div class="border1"></div>
+	<div class="border2"></div>
+</div>
+----
+background: #c00
+----
+css: body, #mcdonalds {
+	background: #c00;
+}
+#mcdonalds .left,
+#mcdonalds .right,
+#mcdonalds .border1,
+#mcdonalds .border2 {
+    margin-left: -130px;
+}
+#mcdonalds {
+    height: 200px;
+    left: 50%;
+    margin: -100px 0 0 -119px;
+    overflow: hidden;
+    top: 25%;
+    width: 238px;
+}
+#mcdonalds .arch {
+	background: #ffc20f;
+	border-radius: 139px/410px;
+	clip: rect(0 75px 201px 0);
+	height: 410px;
+	position: absolute;
+	transform: skewx(-1deg);
+	width: 139px;
+}
+#mcdonalds .arch1 {
+	left: 130px;
+}
+#mcdonalds .arch2 {
+	left: 135px;
+	transform: skewx(0deg) scalex(-0.9);
+}
+#mcdonalds .glow {
+	clip: rect(0px 267px 189px 130px);
+	left: 29px;
+	position: absolute;
+	top: 16px;
+	transform: scalex(0.83) scaley(0.95);
+}
+#mcdonalds .glow .arch {
+	background-image: linear-gradient(0deg,rgb(247,245,103) 70%,rgb(255,195,15) 100%);
+}
+#mcdonalds .inner {
+	clip: rect(0 280px 222px 130px);
+	left: 61px;
+	position: absolute;
+	top: 23px;
+	transform: scalex(0.66);
+}
+#mcdonalds .inner .arch2 {
+	left: 142px;
+}
+#mcdonalds .hole {
+	clip: rect(0 270px 230px 130px);
+	left: 61px;
+	position: absolute;
+	top: 23px;
+	transform: scalex(0.66);
+}
+#mcdonalds .hole .arch {
+	background: #c00; 
+}
+#mcdonalds .hole .arch1 {
+	clip: rect(5px 57px 201px 0);
+	left: 158px;
+	transform: skewx(0deg);
+}
+#mcdonalds .hole .arch2 {
+	clip: rect(0 55px 201px 0);
+	left: 124px;
+	transform: skewx(-2deg) scalex(-0.9);
+}
+#mcdonalds .triangle {
+	border: 14px solid transparent;
+	border-bottom-color: #ffc20f;
+	position: absolute;
+}
+#mcdonalds .triangle1 {
+	left: 135px;
+	top: 168px;
+}
+#mcdonalds .triangle2 {
+	left: 236px;
+	top: 156px;
+}
+#mcdonalds .right {
+	clip: rect(0 249px 250px 0px);
+	left: 498px;
+	position: absolute;
+	transform: scalex(-1);
+}
+#mcdonalds .right .glow {
+	left: 40px;
+}
+#mcdonalds .right .inner {
+	left: 71px;
+}
+#mcdonalds .right .inner .arch2 {
+	left: 141px;
+	transform: skewx(0deg) scalex(-0.9) rotate(1deg);
+}
+#mcdonalds .border1 {
+	background: #ffc20f;
+	height: 15px;
+	left: 230px;
+	position: absolute;
+	top: 180px;
+	width: 38px;
+}
+#mcdonalds .border2 { 
+	background: #c00;
+	height: 15px;
+	left: 229px;
+	position: absolute;
+	top: 189px;
+	width: 40px;
+}
+----
+prefix: 1
+----

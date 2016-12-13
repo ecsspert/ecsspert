@@ -1,0 +1,6 @@
+Title: eCSSpert.com
+----
+Author: Vlad Zinculescu, Anca Zinculescu
+----
+Copyright: © 2011-(date: Year) eCSSpert.com
+----
