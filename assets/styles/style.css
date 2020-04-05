@@ -29,34 +29,7 @@ img {
 .fleft {
 	float: left !important;
 }
-/*-----------------------------------------------------------------------------
--* Fonts
--*---------------------------------------------------------------------------*/
-/*
- * Web Fonts from fontspring.com
- *
- * All OpenType features and all extended glyphs have been removed.
- * Fully installable fonts can be purchased at http://www.fontspring.com
- * The fonts included in this stylesheet are subject to the End User License you purchased
- * from Fontspring. The fonts are protected under domestic and international trademark and 
- * copyright law. You are prohibited from modifying, reverse engineering, duplicating, or
- * distributing this font software.
- * (c) 2010-2013 Fontspring
- * 
- * The fonts included are copyrighted by the vendor listed below.
- * Vendor:      Fontfabric
- * License URL: http://www.fontspring.com/fflicense/fontfabric
- */
-@font-face {
-    font-family: "ZagBoldRegular";
-    src: url("/assets/fonts/ZagBold/Zag_Bold-webfont.eot");
-    src: url("/assets/fonts/ZagBold/Zag_Bold-webfont.eot?#iefix") format("embedded-opentype"),
-         url("/assets/fonts/ZagBold/Zag_Bold-webfont.woff") format("woff"),
-         url("/assets/fonts/ZagBold/Zag_Bold-webfont.ttf") format("truetype"),
-         url("/assets/fonts/ZagBold/Zag_Bold-webfont.svg#ZagBoldRegular") format("svg");
-    font-weight: normal;
-    font-style: normal;
-}
+
 /*-----------------------------------------------------------------------------
 -* Main skeleton
 -*---------------------------------------------------------------------------*/
@@ -637,7 +610,7 @@ header .beta {
 /*-----------------------------------------------------------------------------
 -* Mobile phones
 -*---------------------------------------------------------------------------*/
-@media only screen 
+@media only screen
 and (max-width : 480px) { /* iPhone landscape or portrait */
 	#iframe {
 		width: 200%;
@@ -738,7 +711,7 @@ and (max-width : 320px) { /* iPhone landscape */
 	#menu-left {
 		height: 200%;
 		transform-origin: 0 0;
-		transform: scale(0.5);		
+		transform: scale(0.5);
 	}
 	#post {
 		left: 2%; /* this is if calc is not supported */
