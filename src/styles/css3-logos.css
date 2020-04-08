@@ -2,11 +2,28 @@ body {
   background-color: #222B37;
   color: #fff;
   font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  margin: 0;
 }
+
+#nav {
+  background: #151B26;
+  padding: 20px;
+}
+#nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 20px;
+}
+#nav a + a {
+  padding-left: 20px;
+  border-left: 1px solid #999;
+}
+
+
 
 #header {
   display: flex;
-  margin: 40px auto 60px;
+  margin: 80px auto 40px;
   max-width: 840px;
 }
 
@@ -134,4 +151,45 @@ body {
 
 .source-code .line-numbers > * {
   display: block;
+}
+
+.middle-of-the-page {
+  height: calc(100vh - 58px); /* nav */
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homepage {
+  max-width: 800px;
+}
+.homepage h1 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 48px;
+}
+.homepage h2 {
+  font-size: 20px;
+  margin-top: 0;
+  font-weight: 500;
+}
+.homepage ul {
+  margin: 20px 0 40px;
+}
+.homepage li + li {
+  margin-top: 10px;
+}
+.homepage li a {
+  color: yellow;
+}
+
+.launch-project {
+  color: white;
+  background-color: blue;
+  text-decoration: none;
+  padding: 24px 32px;
+  display: inline-block;
+  border-radius: 40px;
+
 }

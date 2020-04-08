@@ -63,19 +63,18 @@ module.exports = {
         </div>
       </div>`,
       css: `
+
       #adidas {
         position: relative;
+        height: 213px;
+        overflow: hidden;
+        width: 305px;
       }
       #adidas, #adidas .stripes {
         background: #017ac3;
       }
       #adidas * {
         position: absolute;
-      }
-      #adidas {
-        height: 213px;
-        overflow: hidden;
-        width: 305px;
       }
       #adidas .leaf-t1,
       #adidas .leaf-t2 {
