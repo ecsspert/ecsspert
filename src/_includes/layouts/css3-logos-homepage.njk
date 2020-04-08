@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The {{ logo.title or logo.name }} logo recreated using pure HTML and CSS3. No images. No JS.">
+  <title>The World Famous CSS3 Logos project | eCSSpert.com</title>
+  <link rel="stylesheet" href="/styles/css3-logos.css">
+  <link rel="stylesheet" href="/styles/prism-dracula-theme.css">
+</head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="nav">
+    <a href="/">eCSSpert.com</a>
+    <a href="/css3-logos/">CSS3 Logos</a>
+  </div>
+  <div class="middle-of-the-page">
+    <div class="homepage">
+      {{ content | safe }}
+    </div>
+  </div>
+</body>
+</html>
