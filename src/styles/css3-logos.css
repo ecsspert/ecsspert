@@ -75,13 +75,6 @@ body {
   position: relative;
   /* box-shadow: 0px 10px 30px #222, -10px -10px 30px #333; */
 }
-.icon {
-  position: relative;
-}
-.icon * {
-  display: block;
-  position: absolute;
-}
 .post {
   /* box-shadow: inset 10px 10px 30px #222, inset -10px -10px 30px #444; */
   /* box-shadow: inset 10px 10px 40px #0168a6, inset -10px -10px 40px #018ce0; */

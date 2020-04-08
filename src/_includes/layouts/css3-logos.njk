@@ -14,13 +14,18 @@
     .showcase {
       background-color: {{ logo.background }};
     }
+    {{ logo.cssForThePage | safe }}
     {{ logo.css | safe }}
   </style>
 </head>
 <body itemscope itemtype="http://schema.org/WebPage">
   <div id="header">
       <h1>
-        {{ logo.name }}
+        {% if (logo.title) %}
+          {{ logo.title }}
+        {% else %}
+          {{ logo.name }}
+        {% endif %}
         <span class="header__subtitle">Logo recreated using pure HTML and CSS3. No images. No JS</span>
       </h1>
 

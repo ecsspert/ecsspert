@@ -11,7 +11,7 @@ const beautifySettings = {
 
 addLineNumbers = function(code) {
   let lineNumbers = '';
-  for(let i=1; i<=100; i++) {
+  for(let i=1; i<=200; i++) {
     lineNumbers += `<span>${i}</span>`
   }
   return `${code}<span class='line-numbers'>${lineNumbers}</span>`;
