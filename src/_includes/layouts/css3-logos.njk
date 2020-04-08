@@ -14,26 +14,27 @@
     .showcase {
       background-color: {{ logo.background }};
     }
-    {{ logo.css }}
+    {{ logo.css | safe }}
   </style>
 </head>
-<body id="top" itemscope itemtype="http://schema.org/WebPage">
-  <div>
-    <h1>{{ logo.name }}</h1>
-    Logo recreated using pure HTML and CSS3. No images. No JS
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="header">
+      <h1>
+        {{ logo.name }}
+        <span class="header__subtitle">Logo recreated using pure HTML and CSS3. No images. No JS</span>
+      </h1>
 
     {# PAGINATION #}
-    <div class="pagination">
-      {% if pagination.previousPageHref %}
-      <a class="pagination-item prev" rel="prev" href="{{ pagination.previousPageHref }}">← Prev</a>
-      {% elseif pagination.lastPageHref %}
-      <a class="pagination-item prev" rel="prev" href="{{ pagination.lastPageHref }}">← Prev</a>
-      {% endif %}
+    {% if pagination.previousPageHref %}
+    <a class="pagination-item pagination-item--prev" rel="prev" draggable="false" href="{{ pagination.previousPageHref }}">← Prev</a>
+    {% elseif pagination.lastPageHref %}
+    <a class="pagination-item pagination-item--prev" rel="prev" draggable="false" href="{{ pagination.lastPageHref }}">← Prev</a>
+    {% endif %}
 
       {% if pagination.nextPageHref %}
-      <a class="pagination-item next" rel="next" href="{{ pagination.nextPageHref }}">Next →</a>
+      <a class="pagination-item pagination-item--next" rel="next" draggable="false" href="{{ pagination.nextPageHref }}">Next →</a>
       {% elseif pagination.firstPageHref %}
-      <a class="pagination-item prev" rel="prev" href="{{ pagination.firstPageHref }}">← Next</a>
+      <a class="pagination-item pagination-item--next" rel="next" draggable="false" href="{{ pagination.firstPageHref }}">Next →</a>
       {% endif %}
     </div>
   </div>
