@@ -16,10 +16,7 @@
   </style>
 </head>
 <body class="logo" itemscope itemtype="http://schema.org/WebPage">
-  <div id="nav">
-    <a href="/" id="ecsspert">eCSSpert.com</a>
-    <a href="/css3-logos/" id="css3-logos">CSS3 Logos</a>
-  </div>
+  {% include "../components/css3-logos/nav.html" %}
   <div id="header">
       {# PAGINATION #}
       {% if pagination.previousPageHref %}
@@ -59,5 +56,6 @@
       <pre class="source-code">{{ logo.css | cssCode | safe }}</pre>
     </div>
   </div>
+  {% include "../components/ga.html" %}
 </body>
 </html>
