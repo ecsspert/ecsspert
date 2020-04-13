@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="description" content="The {{ logo.title or logo.name }} logo recreated using pure HTML and CSS3. No images. No JS.">
   <title>{{ logo.title or logo.name }} logo in CSS3 | eCSSpert.com</title>
   <link rel="stylesheet" href="/styles/css3-logos.css">
@@ -15,33 +15,33 @@
     {{ logo.css | safe }}
   </style>
 </head>
-<body itemscope itemtype="http://schema.org/WebPage">
+<body class="logo" itemscope itemtype="http://schema.org/WebPage">
   <div id="nav">
-    <a href="/">eCSSpert.com</a>
-    <a href="/css3-logos/">CSS3 Logos</a>
+    <a href="/" id="ecsspert">eCSSpert.com</a>
+    <a href="/css3-logos/" id="css3-logos">CSS3 Logos</a>
   </div>
   <div id="header">
-      <h1>
-        {% if (logo.title) %}
-          {{ logo.title }}
-        {% else %}
-          {{ logo.name }}
-        {% endif %}
-        <span class="header__subtitle">Logo recreated using pure HTML and CSS3. No images. No JS</span>
-      </h1>
-
-    {# PAGINATION #}
-    {% if pagination.previousPageHref %}
-    <a class="pagination-item pagination-item--prev" rel="prev" draggable="false" href="{{ pagination.previousPageHref }}">← Prev</a>
-    {% elseif pagination.lastPageHref %}
-    <a class="pagination-item pagination-item--prev" rel="prev" draggable="false" href="{{ pagination.lastPageHref }}">← Prev</a>
-    {% endif %}
+      {# PAGINATION #}
+      {% if pagination.previousPageHref %}
+      <a class="pagination-item pagination-item--prev" rel="prev" draggable="false" href="{{ pagination.previousPageHref }}">← Prev</a>
+      {% elseif pagination.lastPageHref %}
+      <a class="pagination-item pagination-item--prev" rel="prev" draggable="false" href="{{ pagination.lastPageHref }}">← Prev</a>
+      {% endif %}
 
       {% if pagination.nextPageHref %}
       <a class="pagination-item pagination-item--next" rel="next" draggable="false" href="{{ pagination.nextPageHref }}">Next →</a>
       {% elseif pagination.firstPageHref %}
       <a class="pagination-item pagination-item--next" rel="next" draggable="false" href="{{ pagination.firstPageHref }}">Next →</a>
       {% endif %}
+      <h1>
+        {% if (logo.title) %}
+          {{ logo.title }}
+        {% else %}
+          {{ logo.name }}
+        {% endif %}
+        <span class="header__subtitle">Logo recreated using pure HTML and CSS3. <span class="nowrap">No images. No JS.<span></span>
+      </h1>
+
     </div>
   </div>
 
