@@ -34,6 +34,8 @@ module.exports = function(eleventyConfig) {
     return code;
   });
 
+  eleventyConfig.addPassthroughCopy("_redirects");
+
   return {
     dir: { input: 'src', output: 'dist', data: '_data' },
     passthroughFileCopy: true,
