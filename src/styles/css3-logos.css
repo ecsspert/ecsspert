@@ -8,7 +8,8 @@ body {
   white-space: nowrap;
 }
 
-#nav {
+#nav,
+#footer {
   background: #151B26;
   padding: 20px;
 }
@@ -167,11 +168,11 @@ body {
 .middle-of-the-page {
   align-items: center;
   display: flex;
-  height: calc(100vh - 58px); /* nav */
   justify-content: center;
   padding: 30px 20px;
   width: 100vw;
   box-sizing: border-box;
+  flex: 1 0 auto;
 }
 
 .homepage {
@@ -204,6 +205,41 @@ body {
   padding: 24px 32px;
   display: inline-block;
   border-radius: 40px;
+}
+
+
+
+.home {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.home p {
+  line-height: 1.5em;
+}
+.home h2 {
+  margin-bottom: 40px;
+}
+.home h3 {
+  margin-top: 40px;
+}
+
+
+#footer {
+  margin-top: 40px;
+}
+#footer div + div {
+  padding-top: 10px;
+}
+#footer a {
+  color: yellow;
+}
+.logo #footer {
+  text-align: center;
+}
+.home #footer div {
+  margin: 0 auto;
+  width: 800px;
 }
 
 
