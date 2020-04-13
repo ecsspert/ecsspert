@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/ianrose/deventy#readme",
   "devDependencies": {
+    "clean-css": "^4.2.3",
     "light-server": "2.6.4"
   },
   "dependencies": {

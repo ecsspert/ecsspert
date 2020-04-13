@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -5,14 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="description" content="The {{ logo.title or logo.name }} logo recreated using pure HTML and CSS3. No images. No JS.">
   <title>{{ logo.title or logo.name }} logo in CSS3 | eCSSpert.com</title>
-  <link rel="stylesheet" href="/styles/css3-logos.css">
-  <link rel="stylesheet" href="/styles/prism-dracula-theme.css">
-  <style>
+  {% set css %}
+    {% include "../../styles/css3-logos.css" %}
     .showcase {
       background-color: {{ logo.background }};
     }
-    {{ logo.cssForThePage | safe }}
     {{ logo.css | safe }}
+    {{ logo.cssForThePage | safe }}
+  {% endset %}
+  <style>
+    {{ css | cssmin | safe }}
   </style>
 </head>
 <body class="logo" itemscope itemtype="http://schema.org/WebPage">
@@ -57,7 +60,9 @@
     </div>
   </div>
 
+
   {% include "../components/css3-logos/footer.html" %}
   {% include "../components/ga.html" %}
+  <link rel="stylesheet" href="/styles/prism-dracula-theme.css">
 </body>
 </html>

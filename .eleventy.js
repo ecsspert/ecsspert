@@ -1,5 +1,18 @@
+// SYNTAX HIGHLIGHTING
 const Prism = require('prismjs');
 Prism.plugins.LineNumbers = true;
+
+addLineNumbers = function(code) {
+  let lineNumbers = '';
+  for(let i=1; i<=200; i++) {
+    lineNumbers += `<span>${i}</span>`
+  }
+  return `${code}<span class='line-numbers'>${lineNumbers}</span>`;
+}
+
+
+
+// BEAUTIFY CODE
 const beautifyHTML = require('js-beautify').html;
 const beautifyCSS = require('js-beautify').css;
 
@@ -9,13 +22,12 @@ const beautifySettings = {
   "end_with_newline": false,
 };
 
-addLineNumbers = function(code) {
-  let lineNumbers = '';
-  for(let i=1; i<=200; i++) {
-    lineNumbers += `<span>${i}</span>`
-  }
-  return `${code}<span class='line-numbers'>${lineNumbers}</span>`;
-}
+
+
+// MINIFY CSS
+const CleanCSS = require("clean-css");
+
+
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/images')
@@ -32,6 +44,10 @@ module.exports = function(eleventyConfig) {
     code = Prism.highlight(code, Prism.languages.css, 'css');
     code = addLineNumbers(code);
     return code;
+  });
+
+  eleventyConfig.addFilter("cssmin", function(code) {
+    return code ? new CleanCSS({}).minify(code).styles : '';
   });
 
   eleventyConfig.addPassthroughCopy("_redirects");
