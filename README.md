@@ -26,8 +26,8 @@ $ npm install
 ```
 $ npm run dev
 ```
- And in debug mode:
- 
+And in debug mode:
+
 ```
 $ npm run dev:debug
 ```
