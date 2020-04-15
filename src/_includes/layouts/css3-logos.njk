@@ -64,6 +64,9 @@
 
   {% include "../components/css3-logos/footer.html" %}
   {% include "../components/ga.html" %}
-  <link rel="stylesheet" href="/styles/prism-dracula-theme.css">
+  <link rel="preload" href="/styles/prism-dracula-theme.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+      <link rel="stylesheet" href="/styles/prism-dracula-theme.css">
+  </noscript>
 </body>
 </html>
