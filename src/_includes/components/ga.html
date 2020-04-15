@@ -1,9 +1,10 @@
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-16398396-1"></script>
+<link rel="preload" as="script" href="/scripts/ga-lite.min.js" />
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+(function(e,t,n,i,s,a,c){e[n]=e[n]||function(){(e[n].q=e[n].q||[]).push(arguments)}
+;a=t.createElement(i);c=t.getElementsByTagName(i)[0];a.async=true;a.src=s
+;c.parentNode.insertBefore(a,c)
+})(window,document,"galite","script","/scripts/ga-lite.min.js");
 
-  gtag('config', 'UA-16398396-1');
+galite('create', 'UA-16398396-1', 'auto');
+galite('send', 'pageview');
 </script>

@@ -1,11 +1,15 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/scripts/index.js',
+  entry: {
+    'index': './src/scripts/index.js',
+    'ga-lite': './src/scripts/ga-lite.js'
+  },
   output: {
     path: path.resolve(__dirname, 'dist/scripts'),
-    filename: 'index.js'
+    filename: '[name].min.js'
   },
+  devtool: 'source-map',
   module: {
     rules: [
       {
