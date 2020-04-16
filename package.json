@@ -15,7 +15,8 @@
     "serve": "light-server -c .lightserverrc",
     "dev": "npm-run-all clean styles:dev scripts:dev eleventy:default --parallel eleventy:watch serve --print-label",
     "dev:debug": "DEBUG=* npm run dev",
-    "build": "run-s clean styles:prod scripts:prod eleventy:default --print-label"
+    "build": "run-s clean styles:prod scripts:prod eleventy:default --print-label",
+    "backup": "run-s build && node backup && echo '\nDone.\nBackup created and commited. Check and push.\n'"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
   "homepage": "https://github.com/ianrose/deventy#readme",
   "devDependencies": {
     "clean-css": "^4.2.3",
+    "date-and-time": "^0.13.1",
     "light-server": "2.6.4"
   },
   "dependencies": {
@@ -40,6 +42,7 @@
     "babel-loader": "^8.0.6",
     "cssnano": "^4.1.10",
     "cssnano-preset-advanced": "^4.0.7",
+    "generate-backup": "^0.1.0",
     "js-beautify": "^1.11.0",
     "node-sass": "^4.12.0",
     "npm-run-all": "^4.1.5",
