@@ -20,8 +20,9 @@
   {% include "../components/head.html" %}
 </head>
 <body class="logo" itemscope itemtype="http://schema.org/WebPage">
-  {% include "../components/css3-logos/nav.html" %}
-  <div id="header">
+  <div role="main">
+    {% include "../components/css3-logos/nav.html" %}
+    <div id="header">
       {# PAGINATION #}
       {% if pagination.previousPageHref %}
       <a class="pagination-item pagination-item--prev" rel="prev" draggable="false" href="{{ pagination.previousPageHref }}">← Prev</a>
@@ -40,32 +41,31 @@
         {% else %}
           {{ logo.name }}
         {% endif %}
-        <span class="header__subtitle">Logo recreated using pure HTML and CSS3. <span class="nowrap">No images. No JS.<span></span>
+        <span class="header__subtitle">Logo recreated using pure HTML and CSS3. <span class="nowrap">No images. No JS.</span></span>
       </h1>
-
     </div>
+
+    <div class="post">
+      <div class="showcase">
+        {{ logo.html | safe }}
+      </div>
+      {# <div>Social</div> #}
+      <div class="code">
+        <h2 class="code__title">HTML</h2>
+        <pre class="source-code">{{ logo.html | htmlCode | safe }}</pre>
+      </div>
+      <div class="code">
+        <h2 class="code__title">CSS</h2>
+        <pre class="source-code">{{ logo.css | cssCode | safe }}</pre>
+      </div>
+    </div>
+
+
+    {% include "../components/css3-logos/footer.html" %}
+    <link rel="preload" href="/styles/prism-dracula-theme.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="/styles/prism-dracula-theme.css">
+    </noscript>
   </div>
-
-  <div class="post">
-    <div class="showcase">
-      {{ logo.html | safe }}
-    </div>
-    {# <div>Social</div> #}
-    <div class="code">
-      <h2 class="code__title">HTML</h2>
-      <pre class="source-code">{{ logo.html | htmlCode | safe }}</pre>
-    </div>
-    <div class="code">
-      <h2 class="code__title">CSS</h2>
-      <pre class="source-code">{{ logo.css | cssCode | safe }}</pre>
-    </div>
-  </div>
-
-
-  {% include "../components/css3-logos/footer.html" %}
-  <link rel="preload" href="/styles/prism-dracula-theme.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-      <link rel="stylesheet" href="/styles/prism-dracula-theme.css">
-  </noscript>
 </body>
 </html>

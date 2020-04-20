@@ -14,13 +14,15 @@
   {% include "../components/head.html" %}
 </head>
 <body class="home" itemscope itemtype="http://schema.org/WebPage">
-  {% include "../components/css3-logos/nav.html" %}
-  <div class="middle-of-the-page">
-    <div class="homepage">
-      {{ content | safe }}
+  <div role="main">
+    {% include "../components/css3-logos/nav.html" %}
+    <div class="middle-of-the-page">
+      <div class="homepage">
+        {{ content | safe }}
+      </div>
     </div>
-  </div>
 
-  {% include "../components/css3-logos/footer.html" %}
+    {% include "../components/css3-logos/footer.html" %}
+  </div>
 </body>
 </html>
