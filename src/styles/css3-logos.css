@@ -137,6 +137,7 @@ body {
 }
 .source-code,
 .line-numbers {
+  background-color: #222B37;
   font-size: 16px;
   line-height: 25px;
 }
