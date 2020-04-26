@@ -1,0 +1,51 @@
+---
+layout: layouts/css3-logos.njk
+title: 'CBS'
+html: |
+  <div id="cbs">
+    <div class="cbs1"></div>
+  </div>
+css: |
+  #cbs {
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    position: relative;
+  }
+  #cbs,
+  #cbs .cbs1 {
+    background: #fff;
+  }
+  #cbs:before,
+  #cbs:after
+  {
+    background-color: #12ABF8;
+    border-radius: 50%;
+    content: "";
+    display: block;
+    height: 204px;
+    left: -2px;
+    overflow: hidden;
+    position: absolute;
+    width: 204px;
+  }
+  #cbs:before {
+    clip: rect(0 200px 58px 0);
+    top: 44px;
+  }
+  #cbs:after {
+    clip: rect(146px 200px 204px 0);
+    top: -44px;
+  }
+  #cbs .cbs1 {
+    border-radius: 50%;
+    display: block;
+    height: 106px;
+    left: 47px;
+    position: absolute;
+    top: 49px;
+    width: 106px;
+    z-index: 10;
+  }
+background: '#12ABF8'
+---

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="The {{ title or name }} logo recreated using pure HTML and CSS3. No images. No JS.">
+  <title>{{ title or name }} logo in CSS3 | eCSSpert.com</title>
+  {% set css %}
+    {% include "../../styles/css3-patterns.css" %}
+    .showcase {
+      {{ pattern }};
+    }
+    {{ cssForThePage | safe }}
+  {% endset %}
+  <style>
+    {{ css | cssmin | safe }}
+  </style>
+
+  {% include "../components/head.html" %}
+</head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="pattern" role="main">
+    {% include "../components/css3-patterns/nav.html" %}
+    <div id="header">
+      <a class="pagination-item pagination-item--prev" rel="prev" draggable="false" href="{{ prevPage }}">← Prev</a>
+      <a class="pagination-item pagination-item--next" rel="next" draggable="false" href="{{ nextPage }}">Next →</a>
+      <h1>
+        {{ title }} CSS Pattern
+      </h1>
+    </div>
+
+    <div class="showcase"></div>
+
+    {% include "../components/footer.html" %}
+    <link rel="preload" href="/styles/prism-dracula-theme.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="/styles/prism-dracula-theme.css">
+    </noscript>
+  </div>
+</body>
+</html>

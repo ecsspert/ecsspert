@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="{{ description }}">
+  <title>{{ title }} - {{ description }} | eCSSpert.com</title>
+  {% set css %}
+    {% include "../../styles/index.css" %}
+    {% include "../../styles/nav-footer.css" %}
+  {% endset %}
+  <style>
+    {{ css | cssmin | safe }}
+  </style>
+  {% include "../components/head.html" %}
+</head>
+<body id="{{ page.fileSlug }}" class="project" itemscope itemtype="http://schema.org/WebPage">
+  <div class="main" role="main">
+    <div id="nav">
+      <a href="/" id="ecsspert">eCSSpert.com</a>
+      {% if page.url !== '/' %}
+        <a href="{{ url }}">{{ title }}</a>
+      {% endif %}
+    </div>
+    <div class="content">
+      {{ content | safe }}
+    </div>
+
+    {% include "../components/footer.html" %}
+  </div>
+  {% include "../components/nosleep.html" %}
+</body>
+</html>
