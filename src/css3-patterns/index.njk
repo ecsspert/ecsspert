@@ -1,81 +1,39 @@
 ---
 layout: layouts/project.njk
 title: CSS3 Patterns
-description: Lovely tiled graphics that take drawing with CSS to another level
+description: Drawing with CSS. Next Level.
 ---
-{% set css %}
-.content--hero {
-  text-align: left;
-}
-.posts {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 100px 20px;
-  grid-auto-flow: row;
-  padding: 0;
-  list-style: none inside;
-  margin-top: 50px;
-}
-
-.post {
-  margin: 0;
-  position: relative;
-  overflow: hidden;
-  height: 300px;
-  width: 300px;
-}
-
-.pattern {
-  height: 100%;
-  width: 100%;
-  display: block;
-}
-
-.post:nth-child(even) {
-  border-radius: 50%;
-}
-
-.post .info {
-  align-items: center;
-  display: flex;
-  height: 100%;
-  justify-content: center;
-  position: absolute;
-  width: 100%;
-  font-size: 24px;
-  pointer-events: none;
-  background-color: rgba(0,0,0,0.8);
-  opacity: 0;
-}
-.post:hover .info {
-  opacity: 1;
-}
+{% set stylesheets %}
+  {% include "../styles/css3-patterns/index.css" %}
 {% endset %}
 
-<div class="content--hero">
-  <h1>{{ title }}</h1>
-  <h2>{{ description }}</h2>
-
-  <p>What I've learned from <a href="/css3-logos/">CSS3 Logos</a> is that having fun is the key to succes. So, based on an idea by <a href="https://leaverou.github.io/css3patterns/" target="_blank" rel="noopener">Lea Verou</a>,<br />I decided to make my own collection of CSS3 Patterns.</p>
-  <p>I hope you'll enjoy them as much as I loved figuring out the puzzle behind each of them.</p>
+<div class="hero">
+  <div class="hero__inner">
+    <a id="link-to-homepage" href="/">eCSSpert.com</a>
+    <h1>{{ title }}</h1>
+    <h3>{{ description }}</h3>
+  </div>
 </div>
 
-<ul class="posts content--showcase">
+<p>What I've learned from <a href="/css3-logos/">CSS3 Logos</a> is that having fun is the key to succes. So, based on an idea by <a href="https://leaverou.github.io/css3patterns/" target="_blank" rel="noopener">Lea Verou</a>, I decided to make my own collection of CSS3 Patterns.</p>
+<p>I hope you'll enjoy them as much as I loved figuring out the intricate puzzle behind each of them.</p>
+
+<ul class="patterns">
   {%- for post in collections.css3patterns -%}
-    <li id="{{ post.fileSlug }}" class="post">
+    <li id="{{ post.fileSlug }}" class="pattern">
       <div class="info">
         <h2>{{ post.data.title | safe }}</h2>
       </div>
-      <a href="./{{ post.fileSlug }}/" class="pattern"></a>
+      <a href="./{{ post.fileSlug }}/" class="showcase"></a>
     </li>
     {% set pattern %}
       .html { {{ post.data.pattern }} }
     {% endset %}
-    {% set css %}
-      {{ css | safe }} #{{ post.fileSlug }} .pattern { {{ post.data.pattern }} }
+    {% set stylesheets %}
+      {{ stylesheets | safe }} #{{ post.fileSlug }} .showcase { {{ post.data.pattern }} }
     {% endset %}
   {%- endfor -%}
 </ul>
 <style>
-  {{ css | cssmin | safe }}
+  {{ stylesheets | cssmin | safe }}
 </style>

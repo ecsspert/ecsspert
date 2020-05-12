@@ -1,0 +1,332 @@
+.patterns {
+  display: grid;
+  grid-template-columns: repeat(4, 15vw);
+  grid-template-rows: repeat(7, 15vw);
+  gap: var(--unit-s);
+  grid-auto-flow: row;
+  padding: 0;
+  list-style: none inside;
+  margin-top: 50px;
+  width: calc(calc(4 * 15vw) + calc(3 * var(--unit-s))); /* columns plus gaps */
+}
+
+.pattern {
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  transition: all .3s;
+}
+.pattern:hover {
+  filter: saturate(1.5);
+  transform: scale(1.05);
+}
+
+.showcase {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.showcase {
+  font-size: 0.1vw !important;
+}
+
+#moskow {
+  grid-column: 1 / 2;
+  grid-row: 1 / 4;
+}
+
+#moskow2 {
+  grid-column: 4 / -1;
+  grid-row: 1 / 4;
+}
+
+#paranoia {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+}
+#paranoia .showcase {
+  font-size: 0.064vw !important;
+}
+
+#forest {
+  grid-column: 4 / -1;
+  grid-row: 4 / 7;
+}
+
+#alegria {
+  grid-column: 2 / 3;
+  grid-row: 3 / 5;
+}
+#alegria .showcase {
+  font-size: 0.15vw !important;
+}
+
+#leopard {
+  grid-column: 3 / 4;
+  grid-row: 1 / 3;
+}
+#leopard .showcase {
+  font-size: 0.079vw !important;
+}
+
+#love {
+  grid-column: 1 / 2;
+  grid-row: 4 / 7;
+}
+#love .showcase {
+  font-size: 0.075vw !important;
+}
+
+#frozen {
+  grid-column: 2 / 3;
+  grid-row: 5 / 7;
+}
+#frozen .showcase {
+  font-size: 0.075vw !important;
+}
+
+#christmass-present {
+  grid-column: 3 / 4;
+  grid-row: 5 / 7;
+}
+#christmass-present .showcase {
+  font-size: 0.075vw !important;
+}
+
+#picnic {
+  grid-column: 3 / 4;
+  grid-row: 3 / 5;
+}
+#picnic .showcase {
+  font-size: 0.0375vw !important;
+}
+
+#dabbblet-shades {
+  grid-column: 1 / 3;
+  grid-row: 7 / 8;
+}
+
+#skulls {
+  grid-column: 3 / -1;
+  grid-row: 7 / 8;
+}
+#skulls .showcase {
+  font-size: 0.052vw !important;
+}
+
+.pattern .info {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  font-size: 24px;
+  pointer-events: none;
+  background-color: rgba(0,0,0,0.8);
+  opacity: 0;
+}
+.pattern:hover .info {
+  /* opacity: 1; */
+}
+
+html {
+  background-color: #ff3a57;
+}
+body {
+  background-color: #161820;
+}
+#nav {
+  display: none;
+}
+.hero {
+  background:
+    radial-gradient(circle, #210a70 2%, transparent 2%) 95em 65em,
+    radial-gradient(circle, #210a70 2%, transparent 2%) 105em 65em,
+    radial-gradient(circle, #210a70 10%, transparent 10%) 80em 45em,
+    radial-gradient(circle, #210a70 8%, transparent 8%) 120em 45em,
+    radial-gradient(circle, #ff3a57 40%, transparent 40%) 100em 20em,
+    radial-gradient(circle, #ff3a57 20%, transparent 20%) 100em 60em,
+    radial-gradient(circle, #ff3a57 8%, transparent 8%) 150em 89em,
+    radial-gradient(circle, #ff3a57 8%, transparent 8%) 144em 78em,
+    radial-gradient(circle, #ff3a57 8%, transparent 8%) 50em 89em,
+    radial-gradient(circle, #ff3a57 8%, transparent 8%) 56em 78em,
+    radial-gradient(circle, #ff3a57 8%, transparent 8%) 150em 132em,
+    radial-gradient(circle, #ff3a57 8%, transparent 8%) 144em 140em,
+    radial-gradient(circle, #ff3a57 8%, transparent 8%) 50em 132em,
+    radial-gradient(circle, #ff3a57 8%, transparent 8%) 56em 140em,
+    linear-gradient(90deg, transparent 50%, #210a70 50%) 150em 50em,
+    linear-gradient(29deg, transparent 41%, #ff3a57 41%, #ff3a57 46%, transparent 46%) 50em 60em,
+    linear-gradient(-29deg, transparent 41%, #ff3a57 41%, #ff3a57 46%, transparent 46% ) 150em 60em;
+  background-size: 200em 200em;
+  background-color: #210A70;
+  font-size: 0.05vw;
+  width: 100vw;
+  max-width: 100vw;
+  text-align: center;
+  padding-top: 262em;
+  box-sizing: border-box;
+  height: 862em;
+}
+
+.hero__inner {
+  background-color: #210A70;
+  display: flex;
+  flex-direction: column;
+  height: 20vw;
+  justify-content: center;
+  margin: 0 auto;
+  width: 50vw;
+}
+.hero h1 {
+  margin: 0;
+  font-size: 7vw;
+}
+.hero h3 {
+  margin: 0;
+  color: #ff3a57;
+  font-weight: 300;
+  font-size: 3vw;
+}
+#link-to-homepage {
+  color: #fff;
+  font-size: 1.5vw;
+  margin-bottom: 1em;
+}
+
+/*
+.##.....##..#######..########..####.##.......########
+.###...###.##.....##.##.....##..##..##.......##......
+.####.####.##.....##.##.....##..##..##.......##......
+.##.###.##.##.....##.########...##..##.......######..
+.##.....##.##.....##.##.....##..##..##.......##......
+.##.....##.##.....##.##.....##..##..##.......##......
+.##.....##..#######..########..####.########.########
+*/
+@media (max-width: 767px) {
+  .hero {
+    font-size: 0.1vw;
+  }
+
+  .hero__inner {
+    width: 80vw;
+    height: 40vw;
+  }
+  
+  .hero h1 {
+    font-size: 10vw;
+  }
+  .hero h3 {
+    font-size: 5vw;
+  }
+  #link-to-homepage {
+    font-size: 3vw;
+    font-weight: 300;
+    margin-bottom: 0.5em;
+  }
+
+  .patterns {   
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(8, 30vw);
+    padding-left: var(--unit-l);
+    padding-right: var(--unit-l);
+    width: 100vw;
+  }
+  
+  #paranoia {
+    grid-column: 1 / -1;
+    grid-row: 1 / 3;
+  }
+  #paranoia .showcase {
+    font-size: 0.098vw !important;
+  }
+  
+
+  #moskow {
+    grid-column: 1 / 4;
+    grid-row: 4 / 5;
+  }
+  #moskow .showcase {
+    font-size: 0.105vw !important;
+  }
+  
+  #moskow2 {
+    grid-column: 4 / -1;
+    grid-row: 4 / 5;
+  }
+  #moskow2 .showcase {
+    font-size: 0.105vw !important;
+  }
+  
+  #forest {
+    grid-column: 4 / -1;
+    grid-row: 8 / 9;
+  }
+  #forest .showcase {
+    font-size: 0.105vw !important;
+  }
+  
+  #alegria {
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+  }
+  #alegria .showcase {
+    font-size: 0.27vw !important;
+  }
+  
+  #leopard {
+    grid-column: 3 / 5;
+    grid-row: 7 / 8;
+  }
+  #leopard .showcase {
+    font-size: 0.079vw !important;
+  }
+  
+  #love {
+    grid-column: 1 / 4;
+    grid-row: 8 / 9;
+  }
+  #love .showcase {
+    font-size: 0.07vw !important;
+  }
+  
+  #frozen {
+    grid-column: 1 / 3;
+    grid-row: 7 / 8;
+  }
+  #frozen .showcase {
+    font-size: 0.089vw !important;
+  }
+  
+  #christmass-present {
+    grid-column: 5 / -1;
+    grid-row: 7 / 8;
+  }
+  #christmass-present .showcase {
+    font-size: 0.067vw !important;
+  }
+  
+  #picnic {
+    grid-column: 3 / 5;
+    grid-row: 3 / 4;
+  }
+  #picnic .showcase {
+    font-size: 0.066vw !important;
+  }
+  
+  #dabbblet-shades {
+    grid-column: 5 / -1;
+    grid-row: 3 / 4;
+  }
+  
+  #skulls {
+    grid-column: 1 / -1;
+    grid-row: 5 / 7;
+  }
+  #skulls .showcase {
+    font-size: 0.109vw !important;
+  }
+}
