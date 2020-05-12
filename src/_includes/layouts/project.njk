@@ -6,23 +6,25 @@
   <meta name="description" content="{{ description }}">
   <title>{{ title }} - {{ description }} | eCSSpert.com</title>
   {% set css %}
-    {% include "../../styles/index.css" %}
+    {% include "../../styles/variables.css" %}
+    {% include "../../styles/x.css" %}
+    {# {% include "../../styles/index.css" %} #}
     {% include "../../styles/nav-footer.css" %}
   {% endset %}
   <style>
-    {{ css | cssmin | safe }}
+    {{ css | safe }}
   </style>
   {% include "../components/head.html" %}
 </head>
 <body id="{{ page.fileSlug }}" class="project" itemscope itemtype="http://schema.org/WebPage">
-  <div class="main" role="main">
+  <div id="main" role="main">
     <div id="nav">
       <a href="/" id="ecsspert">eCSSpert.com</a>
       {% if page.url !== '/' %}
         <a href="{{ url }}">{{ title }}</a>
       {% endif %}
     </div>
-    <div class="content">
+    <div class="post">
       {{ content | safe }}
     </div>
 

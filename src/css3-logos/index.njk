@@ -7,41 +7,43 @@ description: famous logos designed entirely in CSS3
   {% include "../styles/css3-logos.css" %}
 {% endset %}
 
-<div class="hero">
+<div class="hero bleed">
   <h1>{{ title }}</h1>
-  <h2>{{ collections.css3logos.length }} {{ description }}</h2>
-  <a href="/css3-logos/adidas-originals/" class="button">Launch project</a>
+  <h3>{{ collections.css3logos.length }} {{ description }}</h3>
+  <p>
+    <a href="/css3-logos/adidas-originals/" class="button">Launch project</a>
+  </p>
 </div>
 
-
-{%- for logo in collections.css3logosshowcase -%}
-  {% set css %}
-    {{ css | safe }} {{ logo.data.css | safe }}
-  {% endset %}
-  <div
-    class="logo-showcase logo-showcase--{{ loop.index }}"
-    style="background-color: {{ logo.data.background }}"
-  >
-    <a href="{{ logo.url }}" class="logo-showcase__inner">{{ logo.data.html | safe }}</a>
-  </div>
-{%- endfor -%}
-
-
-<div class="content--rest">
-  <p>I'm kind of a CSS buff. Most people, including myself, were excited that CSS3 brought new possibilities for drawing shapes like buttons, tooltips, ribbons, etc.</p>
-  <p>I was tinkering one day with CSS, trying to create some GoogleMaps-like pins from only 1 HTML element, but my mind was on that Adidas Originals t-shirt I saw on TV, and the idea popped into my head. The first render of the logo sucked, but by the time I got to the Nike logo, I realized that CSS has some hidden (from me) power.</p>
-  <p>I like puzzles, so working in vector software to emulate the "powers" of CSS3, was a pretty fun project. I'm glad so many people enjoyed it.</p>
-
-  <h2>Featured on</h2>
-  <p>I'm very honored to be mentioned by so many important and diverse websites, here are some of them:</p>
-  <ul>
-    <li><a href="https://news.ycombinator.com/item?id=3159660" target="_blank" rel="noopener">Hacker News</a> #1 for 2 days;</li>
-    <li><a href="https://www.theguardian.com/technology/2011/nov/14/flash-death-bad-windows-phone" target="_blank" rel="noopener">The Guardian</a> mentioned this as the example that Flash is dead;</li>
-    <li><a href="https://css-tricks.com/examples/ShapesOfCSS/" target="_blank" rel="noopener">The Shapes of CSS</a> by CSS-Tricks;</li>
-    <li><a href="https://thenextweb.com/dd/2011/10/26/famous-logos-designed-entirely-in-css/" target="_blank" rel="noopener">The Next Web</a>.</li>
-  </ul>
-  <a href="/css3-logos/adidas-originals/" class="button">Launch project</a>
+<div class="showcase bleed">
+  {%- for logo in collections.css3logosshowcase -%}
+    {% set css %}
+      {{ css | safe }} {{ logo.data.css | safe }}
+    {% endset %}
+    <div
+      class="logo-showcase logo-showcase--{{ loop.index }}"
+      style="background-color: {{ logo.data.background }}"
+    >
+      <a href="{{ logo.url }}" class="logo-showcase__inner">{{ logo.data.html | safe }}</a>
+    </div>
+  {%- endfor -%}
 </div>
+
+<p>I'm kind of a CSS buff. Most people, including myself, were excited that CSS3 brought new possibilities for drawing shapes like buttons, tooltips, ribbons, etc.</p>
+<p>I was tinkering one day with CSS, trying to create some GoogleMaps-like pins from only 1 HTML element, but my mind was on that Adidas Originals t-shirt I saw on TV, and the idea popped into my head. The first render of the logo sucked, but by the time I got to the Nike logo, I realized that CSS has some hidden (from me) power.</p>
+<p>I like puzzles, so working in vector software to emulate the "powers" of CSS3, was a pretty fun project. I'm glad so many people enjoyed it.</p>
+
+<h2>Featured on</h2>
+<p>I'm very honored to be mentioned by so many important and diverse websites, here are some of them:</p>
+<ul>
+  <li><a href="https://news.ycombinator.com/item?id=3159660" target="_blank" rel="noopener">Hacker News</a> #1 for 2 days;</li>
+  <li><a href="https://www.theguardian.com/technology/2011/nov/14/flash-death-bad-windows-phone" target="_blank" rel="noopener">The Guardian</a> mentioned this as the example that Flash is dead;</li>
+  <li><a href="https://css-tricks.com/examples/ShapesOfCSS/" target="_blank" rel="noopener">The Shapes of CSS</a> by CSS-Tricks;</li>
+  <li><a href="https://thenextweb.com/dd/2011/10/26/famous-logos-designed-entirely-in-css/" target="_blank" rel="noopener">The Next Web</a>.</li>
+</ul>
+<p>
+  <a href="/css3-logos/adidas-originals/" class="button">Launch project</a>
+</p>
 
 <style>
   {{ css | safe }}

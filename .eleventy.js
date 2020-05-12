@@ -7,7 +7,7 @@ addLineNumbers = function(code) {
   for(let i=1; i<=200; i++) {
     lineNumbers += `<span>${i}</span>`
   }
-  return `${code}<span class='line-numbers'>${lineNumbers}</span>`;
+  return `<div class="editor__code-highlighted">${code}</div><span class='editor__line-numbers'>${lineNumbers}</span>`;
 }
 
 

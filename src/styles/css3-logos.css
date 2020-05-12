@@ -1,44 +1,40 @@
-/*
-.##.....##..#######..##.....##.########
-.##.....##.##.....##.###...###.##......
-.##.....##.##.....##.####.####.##......
-.#########.##.....##.##.###.##.######..
-.##.....##.##.....##.##.....##.##......
-.##.....##.##.....##.##.....##.##......
-.##.....##..#######..##.....##.########
-*/
 .hero {
-  grid-area: 1 / 5 / 2 / 11;
-  margin-bottom: 5rem;
   text-align: center;
 }
 
-.logo-showcase{
+.showcase {
+  grid-gap: var(--unit-xs);
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  margin-top: var(--unit-xxl);
+  margin-bottom: var(--unit-xxl);
+}
+
+.logo-showcase {
   align-self: baseline;
   box-sizing: border-box;
   overflow: hidden;
   position: relative;
-  margin-bottom: 4rem;
 }
 .logo-showcase--1 {
   grid-area: 2 / 6 / 3 / 10;
-  height: 400px;
+  height: 25vw;
 }
 .logo-showcase--2 {
   grid-area: 2 / 3 / 3 / 6;
-  height: 320px;
+  height: 19vw;
 }
 .logo-showcase--3 {
   grid-area: 2 / 10 / 3 / 13;
-  height: 320px;
+  height: 19vw;
 }
 .logo-showcase--4 {
   grid-area: 2 / 1 / 3 / 3;
-  height: 200px;
+  height: 12vw;
 }
 .logo-showcase--5 {
   grid-area: 2/ 13 / 3 / 15;
-  height: 200px;
+  height: 12vw;
 }
 
 .logo-showcase .logo-showcase__inner {
@@ -65,173 +61,151 @@
   overflow: visible;
 }
 .logo-showcase #mcdonalds {
-  transform: scale(0.66);
+  transform: scale(0.6);
 }
-
-
 
 /*
-..######..####.##....##..######...##.......########...............##....##....###....##.....##
-.##....##..##..###...##.##....##..##.......##.....................###...##...##.##...##.....##
-.##........##..####..##.##........##.......##.....................####..##..##...##..##.....##
-..######...##..##.##.##.##...####.##.......######......#######....##.##.##.##.....##.##.....##
-.......##..##..##..####.##....##..##.......##.....................##..####.#########..##...##.
-.##....##..##..##...###.##....##..##.......##.....................##...###.##.....##...##.##..
-..######..####.##....##..######...########.########...............##....##.##.....##....###...
+..######..####.##....##..######...##.......########....##........#######...######....#######.
+.##....##..##..###...##.##....##..##.......##..........##.......##.....##.##....##..##.....##
+.##........##..####..##.##........##.......##..........##.......##.....##.##........##.....##
+..######...##..##.##.##.##...####.##.......######......##.......##.....##.##...####.##.....##
+.......##..##..##..####.##....##..##.......##..........##.......##.....##.##....##..##.....##
+.##....##..##..##...###.##....##..##.......##..........##.......##.....##.##....##..##.....##
+..######..####.##....##..######...########.########....########..#######...######....#######.
 */
-#header {
+.logo-gallery {
   align-items: center;
-  display: flex;
-  margin: 3rem auto 5rem;
-  max-width: 800px;
-  text-align: center;
-}
-
-#header h1 {
-  flex: auto 1 1;
-  font-size: 48px;
-  margin: 0;
-  padding: 0 40px;
-}
-
-.header__subtitle {
-  display: block;
-  font-size: 16px;
-  font-weight: normal;
-  margin-top: 1.25em;
-}
-
-.pagination-item {
-  align-items: center;
-  background: var(--black);
-  border-radius: 50%;
-  display: flex;
-  flex: auto 0 0;
-  font-size: 8px;
-  height: 10em;
-  justify-content: center;
-  overflow: hidden;
-  text-indent: -999px;
-  width: 10em;
-}
-.pagination-item:after {
-  border: 1em solid #eee;
-  border-right: 0 none;
-  border-top: 0 none;
-  content: "";
-  display: block;
-  height: 2em;
-  transform: rotate(45deg) translate(0.3em, -0.2em);
-  width: 2em;
-}
-.pagination-item:hover {
-  filter: invert(1);
-}
-
-.pagination-item:hover:after {
-  border-color: #fff;
-}
-.pagination-item:active {
-  background-color: var(--background);
-}
-
-.pagination-item--prev {
-  order: -1;
-}
-.pagination-item--next {
-  order: 1;
-  transform: rotate(180deg);
-}
-
-
-
-/*
-.########...#######...######..########
-.##.....##.##.....##.##....##....##...
-.##.....##.##.....##.##..........##...
-.########..##.....##..######.....##...
-.##........##.....##.......##....##...
-.##........##.....##.##....##....##...
-.##.........#######...######.....##...
-*/
-.post {
-  border-radius: 30px;
   box-sizing: border-box;
-  margin: 0 auto 5rem;
-  width: 800px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 100vw;
+  padding: 0 var(--unit-m);
+  width: 100vw;
 }
-
-.post > * {
-  /* box-shadow:  10px 10px 30px #222, -10px -10px 30px #333; */
-  background: #282a36;
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid #0E121A;
-}
-.post > * + * {
-  margin-top: 30px;
-}
-/*
-..######..##.....##..#######..##......##..######.....###.....######..########
-.##....##.##.....##.##.....##.##..##..##.##....##...##.##...##....##.##......
-.##.......##.....##.##.....##.##..##..##.##........##...##..##.......##......
-..######..#########.##.....##.##..##..##.##.......##.....##..######..######..
-.......##.##.....##.##.....##.##..##..##.##.......#########.......##.##......
-.##....##.##.....##.##.....##.##..##..##.##....##.##.....##.##....##.##......
-..######..##.....##..#######...###..###...######..##.....##..######..########
-*/
-.showcase {
+.logo-wrapper {
   align-items: center;
   border-radius: 12px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.4);
   display: flex;
+  flex: auto 1 1;
   height: 500px;
   justify-content: center;
+  margin: 0 var(--unit-m);
+  max-width: 1200px;
   position: relative;
 }
-.showcase > * {
+
+.logo-wrapper > * {
   flex: auto 0 0;
 }
 
-.code {
-  background-color: var(--code-background);
-  color: var(--code-text);
+.editor {
+  background-color: var(--color-dracula);
+  border-radius: var(--unit-xs);
+  overflow: hidden;
 }
-.code__title {
-  padding: 30px 30px 30px 80px;
-  margin: 0;
-  border-bottom: 1px solid #0E121A;
-  box-shadow: 0 1px 0 #334052;
+.logo-gallery + .editor {
+  margin-top: var(--unit-xxl);
+}
+.editor__title {
+  padding: var(--unit-m) var(--unit-m) 0 var(--unit-xxxl);
+  margin-top: 0;
 ;
 }
-.actual-code,
-.line-numbers {
-  background-color: var(--code-background);
-  font-size: 16px;
-  line-height: 25px;
+.editor__code,
+.editor__line-numbers {
+  font-family: Courier, monospace;
+  font-size: var(--unit-s);
+  line-height: 1.5em;
+  letter-spacing: 0.03em;
 }
 
-.actual-code {
-  margin: 30px 0;
+.editor__code {
+  color: var(--color-gray-4);
+  margin: var(--unit-m) 0;
   overflow: hidden;
-  padding-left: 80px;
+  padding-left: var(--unit-xxxl);
   position: relative;
 }
+.editor__code-highlighted {
+  overflow: scroll;
+  padding-right: var(--unit-s);
+}
 
-.actual-code .line-numbers {
-  color: #8391b4;
+.editor__line-numbers {
+  color: var(--color-gray-3);
   display: block;
   left: 0;
   position: absolute;
   text-align: right;
   top: 0;
-  width: 55px;
   user-select: none;
+  width: var(--unit-xxl);
 }
 
-.actual-code .line-numbers > * {
+.editor__line-numbers > * {
   display: block;
 }
 
+/*
+.########....###....########..##.......########.########
+....##......##.##...##.....##.##.......##..........##...
+....##.....##...##..##.....##.##.......##..........##...
+....##....##.....##.########..##.......######......##...
+....##....#########.##.....##.##.......##..........##...
+....##....##.....##.##.....##.##.......##..........##...
+....##....##.....##.########..########.########....##...
+*/
+@media (max-width: 1400px) {
+  .showcase {
+    max-width: 100vw;
+    width: 100vw;
+    box-sizing: border-box;
+  }
+  .logo-showcase #adidas {
+    transform: scale(0.8);
+  }
+  .logo-showcase #pepsi {
+    transform: scale(0.8);
+  }
+  .logo-showcase #twitter {
+    transform: scale(0.65);
+  }
+  .logo-showcase #apple {
+    transform: scale(0.55);
+  }
+  .logo-showcase #mcdonalds {
+    transform: scale(0.45);
+  }
+}
+@media (max-width: 1112px) {
+  .logo-showcase #pepsi {
+    transform: scale(0.65);
+  }
+  .logo-showcase #apple {
+    transform: scale(0.45);
+  }
+  .logo-showcase #mcdonalds {
+    transform: scale(0.40);
+  }
+}
+@media (max-width: 900px) {
+  .logo-showcase #adidas {
+    transform: scale(0.6);
+  }
+  .logo-showcase #pepsi {
+    transform: scale(0.55);
+  }
+  .logo-showcase #twitter {
+    transform: scale(0.55);
+  }
+  .logo-showcase #apple {
+    transform: scale(0.45);
+  }
+  .logo-showcase #mcdonalds {
+    transform: scale(0.35);
+  }
+}
 
 /*
 .##.....##..#######..########..####.##.......########
@@ -242,114 +216,79 @@
 .##.....##.##.....##.##.....##..##..##.......##......
 .##.....##..#######..########..####.########.########
 */
-@media (max-width: 414px) {
-  .content {
-    width: 100vw;
+@media (max-width: 767px) {
+  .showcase {
+    padding-left: var(--unit-l);
+    padding-right: var(--unit-l);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: var(--unit-m);
   }
-  .hero {
-    grid-area: 1 / 1 / 2 / -1;
-    padding: 0 20px;
-  }
-  .content--rest {
-    padding: 0 20px;
-  }
-
   .logo-showcase {
-    height: 300px;
-  }
-  .logo-showcase__inner > * {
-    transform: scale(0.8) !important;
-  }
-  .logo-showcase--1 {
-    grid-area: 2 / 2 / 3 / 3;
-  }
-  .logo-showcase--2 {
-    grid-area: 2 / 1 / 3 / 2;
+    height: 50vw;
   }
   
-  .logo-showcase--3,
+  .logo-showcase--2 {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .logo-showcase--1 {
+    grid-area: 1 / 2 / -1 / -1;
+    transform: translateY(var(--unit-l));
+  }
+  .logo-showcase--3 {
+    grid-area: 2 / 1 / -1 / 2;
+  }
   .logo-showcase--4 {
-    display: none;
+    grid-area: 2 / 2 / -1 / -1;
+    transform: translateY(var(--unit-l));
   }
   .logo-showcase--5 {
-    grid-area: 2 / 3 / 3 / -1;
-  }
-  .logo-showcase--5 .logo-showcase__inner > * {
-    transform: scale(0.9) !important;
-  }
-
-  .logo #nav #ecsspert {
     display: none;
   }
 
-  #header {
-    margin: 30px 0;
-    text-align: left;
+  .logo-showcase #adidas,
+  .logo-showcase #pepsi,
+  .logo-showcase #twitter,
+  .logo-showcase #apple,
+  .logo-showcase #mcdonalds {
+    transform: scale(1);
   }
-
-  #header h1 {
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: 32px;
+}
+@media (max-width: 700px) {
+  .logo-showcase #adidas {
+    transform: scale(0.8);
   }
-  .header__subtitle {
-    font-size: 14px;
+  .logo-showcase #twitter {
+    transform: scale(0.8);
   }
-
-  .pagination-item {
-    background: none;
-    border-radius: 0;
-    box-shadow: none;
-    box-sizing: border-box;
-    color: transparent;
-    font-size: 5px;
-    margin-bottom: 20px;
-    transform: none;
-    height: 8em;
-  }
-
-
-
-  .post {
-    width: 100vw;
-    box-sizing: border-box;
-    border-radius: 0;
-    padding: 0;
-  }
-  .post > * {
-    border-radius: 0;
-  }
-
-  .showcase {
-    height: 450px;
-  }
-
-  #nike {
-    transform: scale(0.9);
-  }
-  #atari {
-    transform: scale(0.7);
-  }
-
-  .actual-code {
-    font-size: 12px;
-    line-height: 18px;
-  }
-  .actual-code, .code__title {
-    padding-left: 70px;
-  }
-  .actual-code .line-numbers {
-    width: 45px;
-  }
-
 }
 
-/* For iOS Safari */
-@supports (-webkit-touch-callout: none) {
-  .pagination-item--prev:after {
-    transform: rotate(45deg) translateX(0em) translateY(-0.5em)
+@media (max-width: 600px) {
+  .logo-showcase #adidas {
+    transform: scale(0.6);
   }
-  .pagination-item--next:after {
-    transform: rotate(225deg) translateX(1.5em) translateY(-1em)
+  .logo-showcase #pepsi {
+    transform: scale(0.7);
+  }
+  .logo-showcase #twitter {
+    transform: scale(0.55);
+  }
+  .logo-showcase #apple {
+    transform: scale(0.8);
+  }
+}
+
+@media (max-width: 500px) {
+  .logo-showcase #adidas {
+    transform: scale(0.4);
+  }
+  .logo-showcase #pepsi {
+    transform: scale(0.55);
+  }
+  .logo-showcase #twitter {
+    transform: scale(0.45);
+  }
+  .logo-showcase #apple {
+    transform: scale(0.65);
   }
 }

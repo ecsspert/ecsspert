@@ -7,10 +7,12 @@
   <meta name="description" content="The {{ title or name }} logo recreated using pure HTML and CSS3. No images. No JS.">
   <title>{{ title or name }} logo in CSS3 | eCSSpert.com</title>
   {% set stylesheets %}
-    {% include "../../styles/index.css" %}
+    {# {% include "../../styles/index.css" %} #}
+    {% include "../../styles/variables.css" %}
+    {% include "../../styles/x.css" %}
     {% include "../../styles/nav-footer.css" %}
     {% include "../../styles/css3-logos.css" %}
-    .showcase {
+    html, .logo-wrapper {
       background-color: {{ background }};
     }
     {{ css | safe }}
@@ -24,32 +26,32 @@
 <body class="logo" itemscope itemtype="http://schema.org/WebPage">
   <div role="main">
     {% include "../components/css3-logos/nav.html" %}
-    <div id="header">
-      {# PAGINATION #}
-      <a class="pagination-item pagination-item--prev" rel="prev" draggable="false" href="{{ prevPage }}">← Prev</a>
-      <a class="pagination-item pagination-item--next" rel="next" draggable="false" href="{{ nextPage }}">Next →</a>
-      <h1>
-        {% if (title) %}
-          {{ title }}
-        {% else %}
-          {{ name }}
-        {% endif %}
-        <span class="header__subtitle">Logo recreated using pure HTML and CSS3. <span class="nowrap">No images. No JS.</span></span>
-      </h1>
-    </div>
-
     <div class="post">
-      <div class="showcase">
-        {{ html | safe }}
+      <div class="hero bleed">
+        <h1>
+          {% if (title) %}
+            {{ title }}
+          {% else %}
+            {{ name }}
+          {% endif %}
+        </h1>
+        <h3 class="header__subtitle">Logo recreated using pure HTML and CSS3. <span class="nowrap">No images. No JS.</span></h3>
+      </div>
+      <div class="logo-gallery">
+        <a class="pagination-item pagination-item--prev" rel="prev" draggable="false" href="{{ prevPage }}">← Prev</a>
+        <div class="logo-wrapper">
+          {{ html | safe }}
+        </div>
+        <a class="pagination-item pagination-item--next" rel="next" draggable="false" href="{{ nextPage }}">Next →</a>
       </div>
       {# <div>Social</div> #}
-      <div class="code">
-        <h2 class="code__title">HTML</h2>
-        <pre class="actual-code">{{ html | htmlCode | safe }}</pre>
+      <div class="editor">
+        <h2 class="editor__title">HTML</h2>
+        <pre class="editor__code">{{ html | htmlCode | safe }}</pre>
       </div>
-      <div class="code">
-        <h2 class="code__title">CSS</h2>
-        <pre class="actual-code">{{ css | cssCode | safe }}</pre>
+      <div class="editor">
+        <h2 class="editor__title">CSS</h2>
+        <pre class="editor__code">{{ css | cssCode | safe }}</pre>
       </div>
     </div>
 
