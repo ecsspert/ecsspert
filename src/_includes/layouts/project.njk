@@ -8,7 +8,6 @@
   {% set css %}
     {% include "../../styles/variables.css" %}
     {% include "../../styles/x.css" %}
-    {# {% include "../../styles/index.css" %} #}
     {% include "../../styles/nav-footer.css" %}
   {% endset %}
   <style>
@@ -20,9 +19,6 @@
   <div id="main" role="main">
     <div id="nav">
       <a href="/" id="ecsspert">eCSSpert.com</a>
-      {% if page.url !== '/' %}
-        <a href="{{ url }}">{{ title }}</a>
-      {% endif %}
     </div>
     <div class="post">
       {{ content | safe }}

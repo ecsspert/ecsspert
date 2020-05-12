@@ -52,6 +52,9 @@
 .##.....##..#######..########..####.########.########
 */
 @media (max-width: 767px) {
+  .project #nav {
+    justify-content: center;
+  }
   #footer {
     display: block;
   }

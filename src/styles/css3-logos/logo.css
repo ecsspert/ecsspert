@@ -122,4 +122,18 @@
   .editor__line-numbers {
     width: var(--unit-xl);
   }
+
+  #nav #ecsspert {
+    display: none;
+  }
+  #nav > * + * {
+    border-left: 0 none;
+    padding-left: 0;
+    margin-left: 0;
+  }
+  #nav > * + *:before {
+    content: "‹";
+    margin-right: 8px;
+    font-size: 16px;
+  }
 }
