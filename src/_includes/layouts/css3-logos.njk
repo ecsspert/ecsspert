@@ -11,7 +11,8 @@
     {% include "../../styles/variables.css" %}
     {% include "../../styles/x.css" %}
     {% include "../../styles/nav-footer.css" %}
-    {% include "../../styles/css3-logos.css" %}
+    {% include "../../styles/css3-logos/index.css" %}
+    {% include "../../styles/css3-logos/logo.css" %}
     html, .logo-wrapper {
       background-color: {{ background }};
     }
@@ -38,10 +39,10 @@
         <h3 class="header__subtitle">Logo recreated using pure HTML and CSS3. <span class="nowrap">No images. No JS.</span></h3>
       </div>
       <div class="logo-gallery">
-        <a class="pagination-item pagination-item--prev" rel="prev" draggable="false" href="{{ prevPage }}">← Prev</a>
         <div class="logo-wrapper">
           {{ html | safe }}
         </div>
+        <a class="pagination-item pagination-item--prev" rel="prev" draggable="false" href="{{ prevPage }}">← Prev</a>
         <a class="pagination-item pagination-item--next" rel="next" draggable="false" href="{{ nextPage }}">Next →</a>
       </div>
       {# <div>Social</div> #}
