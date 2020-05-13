@@ -30,7 +30,7 @@
       <a href="/css3-patterns/" id="back-home">←&nbsp;&nbsp;CSS3 Patterns</a>
       <div id="header">
         <h1>
-          {{ title }} <span class="nowrap">CSS Pattern</span>
+          {{ title }} <span class="nowrap"> Pattern</span>
         </h1>
         <div id="pagination">
           <a class="pagination-item pagination-item--prev" rel="prev" draggable="false" href="{{ prevPage }}">←</a>
@@ -43,7 +43,7 @@
 
       <div class="editor">
         <h2 class="editor__title">CSS</h2>
-        <pre class="editor__code">{{ pattern | cssCode | safe }}</pre>
+        <pre class="editor__code">{{ (".html {" + pattern + " } ") | cssCode | safe }}</pre>
       </div>
 
     </div>

@@ -11,6 +11,7 @@ body {
 #header {
   display: flex;
   justify-content: space-between;
+  /* align-items:flex-start; */
 }
 
 h1,
@@ -25,6 +26,7 @@ h1,
   padding: var(--unit-xxs) var(--unit-xs);
   border-radius: var(--unit-xs) var(--unit-xs) 0 0;
   font-weight: bold;
+  text-indent: -1px;
 }
 
 h1 {
@@ -45,6 +47,8 @@ h1 {
 .pagination-item {
   color: var(--color-black);
   display: inline-block;
+  font-weight: bold;
+  font: var(--font-text);
   line-height: var(--unit-xl);
   padding: var(--unit-s);
   text-align: center;
@@ -75,7 +79,15 @@ h1 {
 @media (max-width: 1112px) {
   .showcase {
     height: 75vh;
+    padding: var(--unit-m) var(--unit-m);
   }
+
+  h1 {
+    font-size: var(--unit-xl);
+    padding-top: var(--unit-s);
+    padding-bottom: var(--unit-s);
+  }
+
 }
 
 /*
@@ -90,6 +102,18 @@ h1 {
 @media (max-width: 767px) {
   .showcase {
     height: 70vh;
-    padding: var(--unit-m) var(--unit-m);
+    padding: var(--unit-m) var(--unit-s);
+  }
+
+  h1 {
+    font-size: var(--unit-l);
+  }
+
+  .pagination-item {
+    line-height: var(--unit-l);
+  }
+
+  .editor {
+    width: auto;
   }
 }
