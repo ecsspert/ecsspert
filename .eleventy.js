@@ -77,6 +77,11 @@ module.exports = function(eleventyConfig) {
     return JSON.stringify(object);
   });
 
+  eleventyConfig.addNunjucksShortcode("thisYear", function() {
+    let date = new Date();
+    return date.getFullYear().toString();
+  });
+
   eleventyConfig.addPassthroughCopy("_redirects");
 
 
