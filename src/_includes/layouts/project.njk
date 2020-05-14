@@ -1,10 +1,6 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="description" content="{{ description }}">
-  <title>{{ title }} - {{ description }} | eCSSpert.com</title>
   {% set css %}
     {% include "../../styles/variables.css" %}
     {% include "../../styles/x.css" %}
@@ -14,6 +10,18 @@
     {{ css | safe }}
   </style>
   {% include "../components/head.html" %}
+  <meta name="description" content="{{ description or tagline }}">
+
+  {% if (page.url === '/') %}
+    <title>{{ title }} | eCSSpert.com</title>
+    <meta property="og:title" content="{{ title }}" />
+    <meta property="og:image" content="/images/css-logos.png" />
+  {% else %}
+    <title>{{ title }} - {{ tagline }} | eCSSpert.com</title>
+    <meta property="og:title" content="{{ title }} - {{ tagline }}" />
+    <meta property="og:image" content="{{ preview }}" />
+  {% endif %}
+  <link rel="shortcut icon" type="image/png" href="/images/favicon.png" />
 </head>
 <body id="{{ page.fileSlug }}" class="project" itemscope itemtype="http://schema.org/WebPage">
   <div id="main" role="main">

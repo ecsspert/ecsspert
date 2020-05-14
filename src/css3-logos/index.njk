@@ -1,7 +1,8 @@
 ---
 layout: layouts/project.njk
 title: CSS3 Logos
-description: famous logos designed entirely in CSS3
+tagline: famous logos designed entirely in CSS3
+preview: "/images/css-logos.png"
 ---
 {% set css %}
   {% include "../styles/css3-logos/index.css" %}
@@ -9,7 +10,7 @@ description: famous logos designed entirely in CSS3
 
 <div class="hero">
   <h1>{{ title }}</h1>
-  <h3>{{ collections.css3logos.length }} {{ description }}</h3>
+  <h3>{{ collections.css3logos.length }} {{ tagline }}</h3>
   <p>
     <a href="/css3-logos/adidas-originals/" class="button">Launch project</a>
   </p>
