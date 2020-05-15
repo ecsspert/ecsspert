@@ -1,0 +1,68 @@
+/*
+.##.....##....###....########..####....###....########..##.......########..######.
+.##.....##...##.##...##.....##..##....##.##...##.....##.##.......##.......##....##
+.##.....##..##...##..##.....##..##...##...##..##.....##.##.......##.......##......
+.##.....##.##.....##.########...##..##.....##.########..##.......######....######.
+..##...##..#########.##...##....##..#########.##.....##.##.......##.............##
+...##.##...##.....##.##....##...##..##.....##.##.....##.##.......##.......##....##
+....###....##.....##.##.....##.####.##.....##.########..########.########..######.
+*/
+
+html { 
+  /* COLORS */
+  --color-white: #FFF;
+  --color-black: #000;
+  --color-gray-5: #F6F6F6;
+  --color-gray-4: #D3D3D3;
+  --color-gray-3: #A9A9A9;
+  --color-gray-2: #878787;
+  --color-gray-1: #161616;
+  --color-yellow-5: #FFF73C;
+  --color-yellow-4: #FFDE0D;
+  --color-yellow-3: #FFD700;
+  --color-yellow-2: #EAC200;
+  --color-yellow-1: #451600;
+  --color-dracula: #222b37;
+
+  /* UNITS */
+  --unit-xxxl: 96px;
+  --unit-xxl: 64px;
+  --unit-xl: 48px;
+  --unit-l: 32px;
+  --unit-m: 24px;
+  --unit-s: 16px;
+  --unit-xs: 12px;
+  --unit-xxs: 8px;
+  --unit-xxxs: 4px;
+
+  /* TYPOGRAPHY */
+  --font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-body: 300 var(--unit-s)/1.37em var(--font);
+  --font-text: 300 var(--unit-m)/1.5em var(--font);
+  --font-title-3: 300 var(--unit-l)/1.2em var(--font);
+  --font-title-2: 700 var(--unit-l)/1.2em var(--font);
+  --font-title-1: 700 var(--unit-xxl)/1em var(--font);
+}
+
+/* small than an iPhone 6 Landscape */
+@media only screen and (max-width : 767px) {
+  html {
+    /* UNITS */
+    --unit-xxxl: 64px;
+    --unit-xxl: 48px;
+    --unit-xl: 32px;
+    --unit-l: 24px;
+    --unit-m: 16px;
+    --unit-s: 12px;
+    --unit-xs: 8px;
+    --unit-xxs: 4px;
+    --unit-xxxs: 2px;
+
+    /* TYPOGRAPHY */
+  --font-body: 300 var(--unit-s)/1.37em var(--font);
+  --font-text: 500 var(--unit-m)/1.66em var(--font);
+  --font-title-3: 300 var(--unit-l)/1.1em var(--font);
+  --font-title-2: 700 var(--unit-l)/1.1em var(--font);
+  --font-title-1: 700 var(--unit-xl)/1.1em var(--font);
+  }
+}

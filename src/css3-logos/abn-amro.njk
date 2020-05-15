@@ -1,0 +1,40 @@
+---
+layout: layouts/css3-logos.njk
+title: 'ABN Amro'
+html: |
+  <div id="abnamro">
+    <div class="icon"></div>
+  </div>
+
+css: |
+  #abnamro {
+    position: relative;
+  }
+  #abnamro .icon {
+    background: #007d78;
+    height: 125px;
+    left: 50%;
+    margin: -102px 0 0 -75px;
+    position: absolute;
+    top: 25%;
+    width: 150px;
+  }
+  #abnamro .icon:after {
+    background: linear-gradient(45deg, #007d78 50%, #ff9300 50%);
+    content: "";
+    display: block;
+    height: 106px;
+    left: 22px;
+    position: absolute;
+      transform: rotate(45deg);
+    top: 72px;
+    width: 106px;
+  }
+cssForThePage: |
+  .logo-wrapper {
+    backgroind-color: #f2f2f2;
+    background: radial-gradient(50% 50%, circle, #ddd 50%, #f2f2f2 50%);
+    background: radial-gradient(#ddd 50%, #f2f2f2 50%);
+    background-size: 4px 4px
+  }
+---

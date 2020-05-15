@@ -1,0 +1,207 @@
+/*
+..######..########.##....##.##.......########
+.##....##....##.....##..##..##.......##......
+.##..........##......####...##.......##......
+..######.....##.......##....##.......######..
+.......##....##.......##....##.......##......
+.##....##....##.......##....##.......##......
+..######.....##.......##....########.########
+*/
+html {
+  background: var(--color-yellow-3);
+}
+body {
+  background-color: var(--color-gray-1);
+  color: var(--color-gray-2);
+  font: var(--font-body);
+  margin: 0;
+}
+/*
+.##.....##....###....####.##....##
+.###...###...##.##....##..###...##
+.####.####..##...##...##..####..##
+.##.###.##.##.....##..##..##.##.##
+.##.....##.#########..##..##..####
+.##.....##.##.....##..##..##...###
+.##.....##.##.....##.####.##....##
+*/
+#main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+/*
+.########...#######...######..########
+.##.....##.##.....##.##....##....##...
+.##.....##.##.....##.##..........##...
+.########..##.....##..######.....##...
+.##........##.....##.......##....##...
+.##........##.....##.##....##....##...
+.##.........#######...######.....##...
+*/
+.post {
+  margin-bottom: var(--unit-xxl);
+  flex: auto 1 1;
+}
+.post + .post:before {
+  content: "- { · · · } -";
+  display: block;
+  font: var(--font-text);
+  margin: 0 auto;
+  text-align: center;
+  width: 50vw;
+}
+
+.post > * {
+  width: 60vw;
+  max-width: 892px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.post > * + * {
+  margin-top: var(--unit-m);
+}
+
+
+.hero {
+  margin-bottom: var(--unit-xl);
+}
+
+
+h1 {
+  color: var(--color-white);
+  font: var(--font-title-1);
+  margin-bottom: 0.2em;
+  margin-top: var(--unit-xxl);
+}
+h2 {
+  color: var(--color-white);
+  font: var(--font-title-2);
+  margin-bottom: 0.5em;
+}
+h3 {
+  font: var(--font-title-3);
+  margin-bottom: 0.5em;
+}
+
+.post * + h2,
+.post * + h3 {
+  margin-top: var(--unit-xl); /* if it's not the first element */
+}
+.post h1 + h2,
+.post h1 + h3,
+.post h2 + h3 {
+  margin-top: 0; /* if it's like a tagline */
+}
+
+.post h1 + h3 + * {
+  margin-top: var(--unit-xl); /* this indicates the header */
+}
+
+p {
+  font: var(--font-text);
+}
+
+ul {
+  font: var(--font-text);
+  list-style: inside;
+}
+
+a {
+  color: var(--color-gray-4);
+  font-weight: 500;
+  text-decoration: none;
+}
+a:hover {
+  color: var(--color-white);
+}
+
+.post figcaption {
+  text-align: center;
+  margin-top: var(--unit-xxs);
+}
+
+.post img {
+  display: block;
+  width: 100%;
+}
+
+/*
+..######...#######..##.....##.########...#######..##....##.########.##....##.########..######.
+.##....##.##.....##.###...###.##.....##.##.....##.###...##.##.......###...##....##....##....##
+.##.......##.....##.####.####.##.....##.##.....##.####..##.##.......####..##....##....##......
+.##.......##.....##.##.###.##.########..##.....##.##.##.##.######...##.##.##....##.....######.
+.##.......##.....##.##.....##.##........##.....##.##..####.##.......##..####....##..........##
+.##....##.##.....##.##.....##.##........##.....##.##...###.##.......##...###....##....##....##
+..######...#######..##.....##.##.........#######..##....##.########.##....##....##.....######.
+*/
+.button {
+  font: var(--font-body);
+  color: var(--color-yellow-1);
+  background-color: var(--color-yellow-3);
+  display: inline-block;
+  padding: var(--unit-s) var(--unit-m);
+  border-radius: var(--unit-xl);
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+.button:hover {
+  background-color: var(--color-yellow-4);
+  color: var(--color-yellow-1);
+  text-decoration: none;
+}
+.button:active {
+  background-color: var(--color-yellow-2);
+  text-decoration: none;
+}
+
+.bleed {
+  display: block;
+  max-width: none;
+  width: 90vw;
+}
+
+.media {
+  margin-top: var(--unit-xl);
+  margin-bottom: var(--unit-xl);
+}
+.media > * {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.nowrap {
+  white-space: nowrap;
+}
+
+
+/*
+.##.....##..#######..########..####.##.......########
+.###...###.##.....##.##.....##..##..##.......##......
+.####.####.##.....##.##.....##..##..##.......##......
+.##.###.##.##.....##.########...##..##.......######..
+.##.....##.##.....##.##.....##..##..##.......##......
+.##.....##.##.....##.##.....##..##..##.......##......
+.##.....##..#######..########..####.########.########
+*/
+@media only screen and (max-width : 667px) {
+  body {
+    color: var(--color-gray-4);
+  }
+  .post > * {
+    width: 100vw;
+    max-width: 100vw;
+    padding-left: var(--unit-l);
+    padding-right: var(--unit-l);
+    box-sizing: border-box;
+  }
+  a {
+    color: var(--color-gray-5);
+    font-weight: 700;
+  }
+  .bleed {
+    width: 100vw;
+    padding: 0;
+  }
+}

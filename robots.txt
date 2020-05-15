@@ -1,9 +1,4 @@
-Sitemap: http://ecsspert.dev/sitemap
-
-User-agent: *
-Disallow: /content
-Disallow: /preview
-Disallow: /render
+Sitemap: http://ecsspert.com/sitemap
 
 User-agent: MSIECrawler
 Disallow: /

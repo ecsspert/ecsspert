@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="The {{ title or name }} logo recreated using pure HTML and CSS3. No images. No JS.">
+  <title>{{ title or name }} logo in CSS3 | eCSSpert.com</title>
+  {% set css %}
+    {% include "../../styles/variables.css" %}
+    {% include "../../styles/x.css" %}
+    {% include "../../styles/nav-footer.css" %}
+    {% include "../../styles/editor.css" %}
+    {# {% include "../../styles/css3-patterns/index.css" %} #}
+    {% include "../../styles/css3-patterns/pattern.css" %}
+    html,
+    .showcase {
+      {{ pattern }};
+    }
+    {{ cssForThePage | safe }}
+  {% endset %}
+  <style>
+    {{ css | cssmin | safe }}
+  </style>
+
+  {% include "../components/head.html" %}
+</head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div role="main">
+    <div class="showcase">
+      <a href="/css3-patterns/" id="back-home">←&nbsp;&nbsp;CSS3 Patterns</a>
+      <div id="header">
+        <h1>
+          {{ title }} <span class="nowrap"> Pattern</span>
+        </h1>
+        <div id="pagination">
+          <a class="pagination-item pagination-item--prev" rel="prev" draggable="false" href="{{ prevPage }}">←</a>
+          <a class="pagination-item pagination-item--next" rel="next" draggable="false" href="{{ nextPage }}">→</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="post">
+
+      <div class="editor">
+        <h2 class="editor__title">CSS</h2>
+        <pre class="editor__code">{{ (".html {" + pattern + " } ") | cssCode | safe }}</pre>
+      </div>
+
+    </div>
+
+    {% include "../components/footer.html" %}
+    <link rel="preload" href="/styles/prism-dracula-theme.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+      <link rel="stylesheet" href="/styles/prism-dracula-theme.css">
+    </noscript>
+  </div>
+</body>
+</html>
