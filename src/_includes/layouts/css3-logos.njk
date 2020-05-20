@@ -16,8 +16,8 @@
     html, .logo-wrapper {
       background-color: {{ background }};
     }
-    {{ css | safe }}
-    {{ cssForThePage | safe }}
+    {{ css | cssmin | safe }}
+    {{ cssForThePage | cssmin | safe }}
   {% endset %}
   <style>
     {{ stylesheets | cssmin | safe }}

@@ -47,5 +47,5 @@ preview: "/images/css-logos.png"
 </p>
 
 <style>
-  {{ css | safe }}
+  {{ css | cssmin | safe }}
 </style>
