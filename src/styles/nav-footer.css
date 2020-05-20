@@ -37,9 +37,6 @@
   #nav {
     padding-bottom: 0;
   }
-  .header__subtitle {
-    font-size: var(--unit-m);
-  }
 }
 
 /*

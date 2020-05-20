@@ -7,7 +7,7 @@
     {% include "../../styles/nav-footer.css" %}
   {% endset %}
   <style>
-    {{ css | safe }}
+    {{ css | cssmin | safe }}
   </style>
   {% include "../components/head.html" %}
   <meta name="description" content="{{ description or tagline }}">

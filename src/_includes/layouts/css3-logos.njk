@@ -16,8 +16,8 @@
     html, .logo-wrapper {
       background-color: {{ background }};
     }
-    {{ css | safe }}
-    {{ cssForThePage | safe }}
+    {{ css | cssmin | safe }}
+    {{ cssForThePage | cssmin | safe }}
   {% endset %}
   <style>
     {{ stylesheets | cssmin | safe }}
@@ -39,7 +39,7 @@
             {{ name }}
           {% endif %}
         </h1>
-        <h3 class="header__subtitle">Logo recreated using pure HTML and CSS3. <span class="nowrap">No images. No JS.</span></h3>
+        <h3>Logo recreated using pure HTML and CSS3. <span class="nowrap">No images. No JS.</span></h3>
       </div>
       <div class="logo-gallery">
         <div class="logo-wrapper">
