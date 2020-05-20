@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   {% set css %}
-    {# {% include "../../styles/variables.css" %} #}
-    {# {% include "../../styles/x.css" %} #}
-    {# {% include "../../styles/nav-footer.css" %} #}
+    {% include "../../styles/variables.css" %}
+    {% include "../../styles/x.css" %}
+    {% include "../../styles/nav-footer.css" %}
   {% endset %}
   <style>
     {{ css | cssmin | safe }}
